@@ -13,12 +13,12 @@ body{margin:0;background:#000}
 a{color:#80A3B9;text-decoration:none}a:hover{color:#E2B877}
 .g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
 .anton{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:-0.01em}
-@keyframes reveal{0%,84%{filter:brightness(.06) saturate(.6)}85%{filter:brightness(1.7) saturate(1.3)}86%{filter:brightness(.2)}87.5%{filter:brightness(1.35) saturate(1.2)}91%{filter:brightness(.5)}100%{filter:brightness(.06) saturate(.6)}}
-.storm{animation:reveal 7s linear infinite}
-@keyframes strike{0%,84%,100%{opacity:0}85%{opacity:.85}86%{opacity:0}87.5%{opacity:.55}89%{opacity:0}}
-.flash{animation:strike 7s linear infinite}
-@keyframes bolt{0%,84%,100%{opacity:0;stroke-dashoffset:900}85%{opacity:1;stroke-dashoffset:0}86%{opacity:.2}87.5%{opacity:1}90%{opacity:0;stroke-dashoffset:0}}
-.bolt path{stroke-dasharray:900;animation:bolt 7s linear infinite}
+@keyframes reveal{0%,18%{filter:brightness(.06) saturate(.6)}20%{filter:brightness(1.7) saturate(1.3)}21%{filter:brightness(.2)}22.5%{filter:brightness(1.35) saturate(1.2)}27%{filter:brightness(1) saturate(1.05)}72%{filter:brightness(.9) saturate(1)}93%,100%{filter:brightness(.06) saturate(.6)}}
+.storm{animation:reveal 9s linear infinite}
+@keyframes strike{0%,19.9%,100%{opacity:0}20%{opacity:.85}21%{opacity:0}22.5%{opacity:.55}24%{opacity:0}}
+.flash{animation:strike 9s linear infinite}
+@keyframes bolt{0%,19.9%,100%{opacity:0;stroke-dashoffset:900}20%{opacity:1;stroke-dashoffset:0}21%{opacity:.2}22.5%{opacity:1}25%{opacity:0;stroke-dashoffset:0}}
+.bolt path{stroke-dasharray:900;animation:bolt 9s linear infinite}
 .b2 path{animation-duration:11s;animation-delay:2.3s}
 .b3 path{animation-duration:13s;animation-delay:5.1s}
 @keyframes glitch{0%,90%,100%{transform:none;text-shadow:none}91%{transform:translate(-6px,2px) skewX(-8deg);text-shadow:8px 0 #8B7BC8,-8px 0 #80A3B9}93%{transform:translate(5px,-3px);text-shadow:-10px 0 #E2B877,6px 0 #8B7BC8}95%{transform:none;text-shadow:3px 0 #80A3B9}}
@@ -45,7 +45,7 @@ input:focus{outline:2px solid #80A3B9;outline-offset:2px}
 .list li::before{content:'ϟ';position:absolute;left:0;color:#80A3B9;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
 @media (max-width:760px){.shards{height:auto!important;padding:120px 4% 120px!important;display:grid;grid-template-columns:1fr 1fr;gap:14px}.shards .shard{position:relative;left:auto!important;top:auto!important;width:auto!important}.shards .word{display:none}.shards .btn{position:relative!important;left:auto!important;bottom:auto!important;grid-column:1/-1;justify-content:center}}
 @media (max-width:600px){.mfit{font-size:44px!important}.big .t{font-size:46px!important}.big>span{padding-left:0!important}}
-@media (prefers-reduced-motion:reduce){.storm,.flash,.bolt path,.glitch,.glitch2,.ml,.mr{animation:none}.storm{filter:brightness(.5)}}
+@media (prefers-reduced-motion:reduce){.storm,.flash,.bolt path,.glitch,.glitch2,.ml,.mr{animation:none}.storm{filter:brightness(.85)}}
 </style>
 </head>
 <body>
