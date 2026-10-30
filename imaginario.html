@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azul Perenne — Imaginario</title>
+<meta name="description" content="Azul Perenne — arte, cultura local, yoga y fotografía analógica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none!important}
+body{margin:0;background:#060101}
+a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
+.g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin 28s linear infinite;display:inline-block}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.fade{animation:fade .5s ease both}
+.tile{position:relative;display:block;width:100%;margin:0 0 18px;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;overflow:hidden;border-radius:3px}
+.tile img{display:block;width:100%;height:auto;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .8s}
+.tile:hover img{transform:scale(1.05);filter:saturate(1.15)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;text-align:left;font:italic 300 18px 'Cormorant Garamond',serif;color:#FCFBF8;background:linear-gradient(180deg,transparent,rgba(6,1,1,.75));opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.tile:hover .cap,.tile:focus-visible .cap{opacity:1;transform:none}
+.chip{transition:background .35s,color .35s,border-color .35s;cursor:pointer}
+.chip:hover{border-color:#B38B59}
+.nav a{color:#FCFBF8}.nav a:hover{color:#B38B59}
+.ctl{transition:background .3s,color .3s;cursor:pointer}.ctl:hover{background:#B38B59;color:#060101}
+@media (prefers-reduced-motion:reduce){.rise,.spin,.fade{animation:none}}
+#lb:not([hidden]){display:flex}
+</style>
+</head>
+<body>
+<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #060101; min-height: 100%">
+
+<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #1E1A26">
+<a href="index.html" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: #FCFBF8"><span class="g" style="color: #80A3B9; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase">
+<a href="imaginario.html" style="color: #B38B59">Imaginario</a>
+<a href="bitacora.html">Bitácora</a>
+<a href="bitacora.html#movimiento">Movimiento</a>
+<a href="bitacora.html#escritos">Escritos</a>
+<a href="index.html#sobre">Sobre Azul</a>
+<span style="color: #80A3B9; letter-spacing: 0.14em">ES <span style="opacity: 0.5">/</span> EN</span>
+<a href="kit.html" style="background: #B38B59; color: #060101; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.18em">El Kit</a>
+</nav>
+</header>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 110px 5% 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div class="rise">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9"><span class="g spin" style="color: #B38B59; margin-right: 12px">✷</span>Portafolio · fotografía analógica</p>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(64px, 10vw, 150px); line-height: 0.9; letter-spacing: -0.02em">Imaginario</h1>
+</div>
+<div style="max-width: 400px">
+<p style="margin: 0 0 12px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 26px; line-height: 1.35; color: #CFD9E2">mis fotos son destellos.</p>
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; color: #B9B3C9"><span class="g" style="color: #B38B59">✶</span> ninguna fotografía ha sido interferida o editada <span class="g" style="color: #B38B59">✶</span></p>
+</div>
+</section>
+
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 5% 40px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 12px" id="chips"></div>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 5% 120px; box-sizing: border-box">
+<div id="grid" style="column-width: 340px; column-gap: 18px">
+
+</div>
+</section>
+
+<section style="background: #2A2140; border-top: 1px solid #3A2F57; padding: 80px 5%">
+<div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px">
+<div>
+<p class="g" style="margin: 0 0 12px; color: #B38B59; font-size: 22px">𖦹</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 52px); line-height: 1.05">Postales del camino, <em style="color: #CFC4EE">en tu correo</em>.</h2>
+</div>
+<a href="kit.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: #B38B59; color: #060101; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Recibe el Kit</a>
+</div>
+</section>
+
+<div id="lb" class="fade" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" hidden style="position: fixed; inset: 0; z-index: 50; background: rgba(6,1,1,0.94); flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 32px; box-sizing: border-box">
+<img id="lb-img" src="" alt="" style="max-width: 92%; max-height: 76%; object-fit: contain; display: block; border-radius: 2px">
+<p id="lb-cap" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #CFD9E2"></p>
+<div style="display: flex; gap: 12px">
+<button type="button" class="ctl" id="lb-prev" aria-label="Anterior" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #FCFBF8; font-size: 20px">←</button>
+<button type="button" class="ctl" id="lb-close" style="height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #FCFBF8; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Cerrar</button>
+<button type="button" class="ctl" id="lb-next" aria-label="Siguiente" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #FCFBF8; font-size: 20px">→</button>
+</div>
+</div>
+
+<footer style="border-top: 1px solid #1E1A26; padding: 48px 5%">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px">Azul Perenne</p>
+<p class="g" style="margin: 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+var S={agua:'Agua',gente:'Gente',ciudad:'Ciudad',luz:'Luz y flora'};
+var ALL=[{"id": "24c08fc32356db81a3bb705ec5def398", "s": "agua", "a": "Atardecer en el mar"}, {"id": "9621cdc63cec7be316b312fc3c792b3d", "s": "luz", "a": "Flores en la noche"}, {"id": "1a9242b3773b70741a5fe278abfce49f", "s": "gente", "a": "Pañuelo violeta, otoño"}, {"id": "0eb59c3be350e980585991aa8bb04dfa", "s": "ciudad", "a": "Noria junto al mar"}, {"id": "5c2dcdd2e011994f7a6b0c83c8da0c17", "s": "agua", "a": "El cielo en el agua"}, {"id": "d07fb9e91faebab675468ed64331ba68", "s": "luz", "a": "Flores amarillas"}, {"id": "1703abbbded9f3905bc0306c14c9c39c", "s": "gente", "a": "Helado en la calle"}, {"id": "960995ba0f0ce2c47f28d92c67590ccd", "s": "agua", "a": "Río de luces"}, {"id": "2f8a09f2d877633b68d1960b24472a33", "s": "luz", "a": "Mariposa azul"}, {"id": "e98cca400aaf95506cdb0e4c5c2150d5", "s": "gente", "a": "Siluetas al atardecer"}, {"id": "57bc7ee7827e379afe44e9a8034fd097", "s": "ciudad", "a": "Ciudad y reflejo"}, {"id": "3232f43f638967860a5aa85766f0bb69", "s": "agua", "a": "Mano sobre el arroyo"}, {"id": "c6c7de89a9490767bb07ad3c5621550a", "s": "luz", "a": "Palmera doble"}, {"id": "86c4e6e129026cbc321c6474cc4031d6", "s": "gente", "a": "Bajo el escenario"}, {"id": "dd6c2a5a1617db6bb08cc2f6e74fc9fa", "s": "agua", "a": "Lago encendido"}, {"id": "3d7503a0e2419f7283994f81660025a1", "s": "ciudad", "a": "Destello en la calle"}, {"id": "f77ce3b0ca48575d56637a0fcc5d6946", "s": "luz", "a": "Mirar hacia arriba"}, {"id": "8a48e0a3034b48185beefeb032d5e12a", "s": "agua", "a": "Ola al anochecer"}, {"id": "2467881d4b9162ca774cf342abc6edff", "s": "gente", "a": "Noche en la ciudad"}, {"id": "213b7374467d720cc1cbd5e84a139419", "s": "ciudad", "a": "Balcón y palmeras"}, {"id": "bbb64a9753d0fed552b69821416fab7b", "s": "luz", "a": "Ventana en penumbra"}, {"id": "cf792270fd17def37c9e8ac3504e8ac2", "s": "agua", "a": "Lago entre colinas"}, {"id": "be0e5c5ba44e73c5cc0343d9f20f7133", "s": "gente", "a": "La multitud roja"}, {"id": "60710c8d6f2bdf6d431ed358306fec07", "s": "ciudad", "a": "Bicicleta y nubes"}, {"id": "4bbc4fcad16f00e18f91e5de802270ba", "s": "luz", "a": "Planta en la ventana"}, {"id": "8eafd7e89e410a47218bb43c02e2b45a", "s": "agua", "a": "Sentada frente al mar"}, {"id": "c348f2757ddb5eebf00b2f2f951ad98c", "s": "gente", "a": "Amigos"}, {"id": "df7843fcd9b96d476e8c19498035d16d", "s": "ciudad", "a": "Ramas de invierno"}, {"id": "d6dfceb8c47cb1eb02e4fbb4637746e0", "s": "luz", "a": "Luz de ventana"}, {"id": "9ac295383b1c945b8b4a0aa3565e9cd4", "s": "agua", "a": "Sombrillas y destello"}, {"id": "185cf54845b611c177fdcf45ef51d616", "s": "ciudad", "a": "Camino de nubes"}, {"id": "8a3ea8b8a2c9f795ba3badd70ccff9ec", "s": "luz", "a": "Cuadro en la pared"}, {"id": "2a97d10fad0ef116995cae708e5e4aeb", "s": "agua", "a": "Playa nublada"}, {"id": "9480f061a54bc4dab3029e446a655bb3", "s": "agua", "a": "Río verde"}].map(function(p){return {src:'images/'+p.id+'.jpg',serie:p.s,serieName:S[p.s],alt:p.a};});
+var f='todo',list=ALL,cur=-1;
+var chips=document.getElementById('chips'),grid=document.getElementById('grid');
+var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap');
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+function chipStyle(on){return 'min-height: 44px; padding: 0 22px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid '+(on?'#B38B59':'#3A2F57')+'; background: '+(on?'#B38B59':'transparent')+'; color: '+(on?'#060101':'#E4E0EA');}
+function render(){
+  list=f==='todo'?ALL:ALL.filter(function(p){return p.serie===f;});
+  chips.innerHTML=['todo','agua','gente','ciudad','luz'].map(function(k){
+    var on=k===f,n=k==='todo'?ALL.length:ALL.filter(function(p){return p.serie===k;}).length;
+    return '<button type="button" class="chip" data-k="'+k+'" aria-pressed="'+on+'" style="'+chipStyle(on)+'">'+(k==='todo'?'Todo':S[k])+' <span style="opacity: 0.6; margin-left: 6px">'+n+'</span></button>';
+  }).join('');
+  grid.innerHTML=list.map(function(p,i){
+    return '<button type="button" class="tile fade" data-i="'+i+'" aria-label="Ampliar: '+esc(p.alt)+'"><img src="'+p.src+'" alt="'+esc(p.alt)+'" loading="lazy"><span class="cap">'+p.serieName+' <span class="g" style="font-style: normal; color: #B38B59">·</span> '+esc(p.alt)+'</span></button>';
+  }).join('');
+}
+function open(i){cur=(i+list.length)%list.length;var p=list[cur];li.src=p.src;li.alt=p.alt;lc.textContent=p.serieName+' · '+p.alt;lb.hidden=false;document.getElementById('lb-close').focus();}
+function close(){lb.hidden=true;cur=-1;}
+chips.addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(b){f=b.getAttribute('data-k');render();}});
+grid.addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(b)open(+b.getAttribute('data-i'));});
+document.getElementById('lb-prev').onclick=function(){open(cur-1);};
+document.getElementById('lb-next').onclick=function(){open(cur+1);};
+document.getElementById('lb-close').onclick=close;
+lb.addEventListener('click',function(e){if(e.target===lb)close();});
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')open(cur-1);if(e.key==='ArrowRight')open(cur+1);});
+render();
+})();
+</script>
+</body>
+</html>
