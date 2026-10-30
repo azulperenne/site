@@ -61,15 +61,15 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 </div>
 
 <div class="rise2" style="flex: 1 1 400px; max-width: 470px; background: rgba(27,20,38,0.88); border: 1px solid #3A2F57; border-radius: 8px; padding: 40px; box-sizing: border-box">
-<form id="kit-form" novalidate style="display: flex; flex-direction: column; gap: 18px; margin: 0">
+<form id="kit-form" method="post" target="kit-sink" novalidate style="display: flex; flex-direction: column; gap: 18px; margin: 0">
 <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.1">Abre el portal</p>
 <div style="display: flex; flex-direction: column; gap: 8px">
 <label for="k-name" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Nombre</label>
-<input id="k-name" name="nombre" type="text" autocomplete="given-name" placeholder="cómo te llamas" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
+<input id="k-name" name="first_name" type="text" autocomplete="given-name" placeholder="cómo te llamas" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
 <label for="k-email" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Correo electrónico</label>
-<input id="k-email" name="email" type="email" required autocomplete="email" placeholder="tu@correo.com" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
+<input id="k-email" name="email_address" type="email" required autocomplete="email" placeholder="tu@correo.com" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
 </div>
 <div>
 <p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Me interesa</p>
@@ -90,7 +90,10 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 </div>
 <button type="submit" class="btn" style="min-height: 56px; border: 0; border-radius: 999px; background: #B38B59; color: #060101; font: inherit; font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; margin-top: 6px">Quiero el kit</button>
 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #A69CC2">Sin spam. Te das de baja con un clic.</p>
+<input type="hidden" name="fields[intereses]" id="k-intereses">
+<input type="hidden" name="fields[idioma]" id="k-idioma">
 </form>
+<iframe name="kit-sink" title="" aria-hidden="true" tabindex="-1" style="display:none"></iframe>
 <div id="kit-done" hidden style="text-align: center; padding: 30px 0">
 <p class="g spin" style="margin: 0 0 18px; font-size: 40px; color: #B38B59">✷</p>
 <p style="margin: 0 0 12px; font-family: 'Cormorant Garamond', serif; font-size: 38px; font-style: italic">El portal está abierto.</p>
@@ -168,19 +171,31 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 </div>
 <script>
 (function(){
-/* Para recibir correos de verdad, conecta este formulario a tu servicio
-   (Mailchimp, ConvertKit, Formspree…): pon su URL en action="" del <form id="kit-form">
-   y method="post", y borra el e.preventDefault() de abajo. */
+/* ============================================================
+   EL KIT — conexión con kit.com
+   Pega aquí la "action URL" de tu formulario de Kit
+   (Kit › Grow › Landing Pages & Forms › tu formulario › Publish › HTML).
+   Se ve así: https://app.kit.com/forms/1234567/subscriptions
+   ============================================================ */
+var KIT_FORM_URL = 'PEGA_AQUI_TU_URL_DE_KIT';
+
 var form=document.getElementById('kit-form'),done=document.getElementById('kit-done');
+var ready=/^https:\/\/app\.(kit|convertkit)\.com\/forms\/\d+\/subscriptions$/.test(KIT_FORM_URL);
+if(ready) form.action=KIT_FORM_URL;
+try{var pre=sessionStorage.getItem('kitEmail');if(pre){document.getElementById('k-email').value=pre;sessionStorage.removeItem('kitEmail');}}catch(e){}
 form.addEventListener('click',function(e){
   var t=e.target.closest('[data-topic]');if(t){t.setAttribute('aria-pressed',t.getAttribute('aria-pressed')==='true'?'false':'true');}
   var l=e.target.closest('[data-lang]');if(l){form.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b===l?'true':'false');});}
 });
 form.addEventListener('submit',function(e){
-  e.preventDefault();
   var em=document.getElementById('k-email');
-  if(!em.checkValidity()){em.reportValidity();return;}
-  form.hidden=true;done.hidden=false;
+  if(!em.checkValidity()){e.preventDefault();em.reportValidity();return;}
+  document.getElementById('k-intereses').value=[].map.call(form.querySelectorAll('[data-topic][aria-pressed="true"]'),function(b){return b.textContent.trim();}).join(', ');
+  var lang=form.querySelector('[data-lang][aria-pressed="true"]');
+  document.getElementById('k-idioma').value=lang?lang.textContent.trim():'';
+  if(!ready){e.preventDefault();console.warn('El Kit: falta pegar KIT_FORM_URL en kit.html — el correo no se envió.');}
+  /* si está listo, el formulario se envía a Kit en segundo plano (iframe oculto) */
+  setTimeout(function(){form.hidden=true;done.hidden=false;form.reset();},ready?400:0);
 });
 document.getElementById('kit-back').onclick=function(){done.hidden=true;form.hidden=false;};
 })();

@@ -178,10 +178,10 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 <p class="g" style="margin: 0 0 18px; color: #B38B59; font-size: 22px">𖦹</p>
 <h2 style="margin: 0 0 18px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 60px); line-height: 1.02">El <em style="color: #CFC4EE">Kit</em> Perenne</h2>
 <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.65; color: #E4E0EA">Una práctica, un ritual y cartas desde el camino, directo a tu correo.</p>
-<form onsubmit="event.preventDefault();location.href='kit.html'" style="display: flex; flex-wrap: wrap; gap: 12px">
+<form onsubmit="event.preventDefault();try{sessionStorage.setItem('kitEmail',document.getElementById('m-email').value)}catch(e){}location.href='kit.html'" style="display: flex; flex-wrap: wrap; gap: 12px">
 <label for="m-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Correo electrónico</label>
 <input id="m-email" type="email" placeholder="tu correo electrónico" style="flex: 1 1 240px; min-height: 52px; padding: 0 20px; border-radius: 999px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
-<a href="kit.html" class="btn btn-b" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #B38B59; color: #060101; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Quiero el kit</a>
+<button type="submit" class="btn btn-b" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 0; border-radius: 999px; background: #B38B59; color: #060101; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Quiero el kit</button>
 </form>
 <p style="margin: 18px 0 0; font-size: 13px; color: #A69CC2">Esto no es solo un newsletter, es un portal.</p>
 </div>
