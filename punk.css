@@ -1,0 +1,10 @@
+/* Estilo punk / fanzine. Para volver a las letras anteriores, quita la línea
+   <link rel="stylesheet" href="/punk.css"> de cada página. */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Special+Elite&display=swap');
+h1,h2,h3,.big .t{font-family:'Pirata One','UnifrakturMaguntia',serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:.01em!important}
+h1 em,h2 em,h3 em{font-style:normal!important}
+header.nav>a:first-child,footer p:first-child{font-family:'Pirata One',serif!important;font-style:normal!important;letter-spacing:.02em}
+[style*="text-transform: uppercase"],nav,.chip,button{font-family:'Special Elite','Courier New',monospace!important;letter-spacing:.12em!important}
+[style*="text-transform: uppercase"][style*="font-size: 12px"],[style*="text-transform: uppercase"][style*="font-size: 13px"]{font-size:14px!important}
+/* títulos como recortes pegados en un fanzine */
+section>h2:first-of-type,section>div>h2:first-of-type{transform:rotate(-1.2deg);transform-origin:left center}
