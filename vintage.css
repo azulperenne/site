@@ -1,0 +1,7 @@
+/* Tono vintage (película analógica). Para volver al original, quita la línea
+   <link rel="stylesheet" href="/vintage.css"> de cada página. */
+img:not(.storm){filter:sepia(.3) saturate(.8) contrast(.92) brightness(.97) hue-rotate(-8deg)}
+@keyframes reveal-v{0%,18%{filter:brightness(.06) saturate(.5) sepia(.3)}20%{filter:brightness(1.6) saturate(1.1) sepia(.25)}21%{filter:brightness(.2) sepia(.3)}22.5%{filter:brightness(1.3) saturate(1) sepia(.28)}27%{filter:brightness(.97) saturate(.85) sepia(.3) contrast(.93)}72%{filter:brightness(.88) saturate(.82) sepia(.32) contrast(.93)}93%,100%{filter:brightness(.06) saturate(.5) sepia(.3)}}
+.storm{animation-name:reveal-v!important}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@media (prefers-reduced-motion:reduce){.storm{animation:none!important;filter:brightness(.85) sepia(.3)}}
