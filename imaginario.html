@@ -24,7 +24,7 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 .tile .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;text-align:left;font:italic 300 18px 'Cormorant Garamond',serif;color:#FCFBF8;background:linear-gradient(180deg,transparent,rgba(6,1,1,.75));opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
 .tile:hover .cap,.tile:focus-visible .cap{opacity:1;transform:none}
 .chip{transition:background .35s,color .35s,border-color .35s;cursor:pointer}
-.chip:hover{border-color:#B38B59}
+.chip:hover{border-color:#80A3B9}
 .nav a{color:#FCFBF8}.nav a:hover{color:#B38B59}
 .ctl{transition:background .3s,color .3s;cursor:pointer}.ctl:hover{background:#B38B59;color:#060101}
 @media (prefers-reduced-motion:reduce){.rise,.spin,.fade{animation:none}}
@@ -101,7 +101,7 @@ var f='todo',list=ALL,cur=-1;
 var chips=document.getElementById('chips'),grid=document.getElementById('grid');
 var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap');
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
-function chipStyle(on){return 'min-height: 44px; padding: 0 22px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid '+(on?'#B38B59':'#3A2F57')+'; background: '+(on?'#B38B59':'transparent')+'; color: '+(on?'#060101':'#E4E0EA');}
+function chipStyle(on){return 'min-height: 44px; padding: 0 22px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid '+(on?'#80A3B9':'#3A2F57')+'; background: '+(on?'#80A3B9':'transparent')+'; color: '+(on?'#060101':'#E4E0EA');}
 function render(){
   list=f==='todo'?ALL:ALL.filter(function(p){return p.serie===f;});
   chips.innerHTML=['todo','agua','gente','ciudad','luz'].map(function(k){
