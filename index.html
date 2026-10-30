@@ -4,15 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Azul Perenne</title>
-<meta name="description" content="Azul Perenne — un refugio creativo para quienes buscan sentido en lo invisible y lo visible. Arte, cultura local, ritual y movimiento.">
+<meta name="description" content="Azul Perenne — un refugio creativo para quienes buscan sentido en lo invisible y lo visible. Arte, cultura local, yoga y fotografía analógica.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet">
 <style>
 [hidden]{display:none!important}
-body{margin:0;background:#000}
-a{color:#80A3B9;text-decoration:none}a:hover{color:#E2B877}
+body{margin:0;background:#060101}
+a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 .g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
-.anton{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:-0.01em}
+@keyframes drift{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.kb{animation:drift 24s ease-in-out infinite alternate}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq{animation:marq 48s linear infinite}
+.strip{animation:marq 70s linear infinite}
+.strip:hover{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin 28s linear infinite;display:inline-block}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-22px) rotate(2deg)}}
+.float{animation:float 9s ease-in-out infinite}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rise{animation:rise 1.6s cubic-bezier(.2,.7,.2,1) both}
+.rise2{animation:rise 1.6s .35s cubic-bezier(.2,.7,.2,1) both}
+.rise3{animation:rise 1.6s .7s cubic-bezier(.2,.7,.2,1) both}
+.zoom{overflow:hidden}.zoom img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}.zoom:hover img{transform:scale(1.07)}
+.btn{transition:background .4s,color .4s,border-color .4s}
+.btn-b:hover{background:#FCFBF8;color:#060101}
+.btn-o:hover{border-color:#80A3B9;color:#80A3B9}
+.nav a{color:#FCFBF8}.nav a:hover{color:#B38B59}
+@media (prefers-reduced-motion:reduce){.kb,.marq,.strip,.spin,.float,.rise,.rise2,.rise3{animation:none}}
 @keyframes reveal{0%,18%{filter:brightness(.06) saturate(.6)}20%{filter:brightness(1.7) saturate(1.3)}21%{filter:brightness(.2)}22.5%{filter:brightness(1.35) saturate(1.2)}27%{filter:brightness(1) saturate(1.05)}72%{filter:brightness(.9) saturate(1)}93%,100%{filter:brightness(.06) saturate(.6)}}
 .storm{animation:reveal 9s linear infinite}
 @keyframes strike{0%,19.9%,100%{opacity:0}20%{opacity:.85}21%{opacity:0}22.5%{opacity:.55}24%{opacity:0}}
@@ -20,88 +39,68 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#E2B877}
 @keyframes bolt{0%,19.9%,100%{opacity:0;stroke-dashoffset:900}20%{opacity:1;stroke-dashoffset:0}21%{opacity:.2}22.5%{opacity:1}25%{opacity:0;stroke-dashoffset:0}}
 .bolt path{stroke-dasharray:900;animation:bolt 9s linear infinite}
 .b2 path{animation-duration:11s;animation-delay:2.3s}
-.b3 path{animation-duration:13s;animation-delay:5.1s}
-@keyframes glitch{0%,90%,100%{transform:none;text-shadow:none}91%{transform:translate(-6px,2px) skewX(-8deg);text-shadow:8px 0 #8B7BC8,-8px 0 #80A3B9}93%{transform:translate(5px,-3px);text-shadow:-10px 0 #E2B877,6px 0 #8B7BC8}95%{transform:none;text-shadow:3px 0 #80A3B9}}
-.glitch{animation:glitch 5s steps(1,end) infinite}
-.glitch2{animation:glitch 8s 1.7s steps(1,end) infinite}
-@keyframes marq{to{transform:translateX(-50%)}}
-@keyframes marqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.ml{animation:marq 26s linear infinite}.mr{animation:marqR 30s linear infinite}
-.shard{position:absolute;display:block;transform:rotate(var(--r));transition:transform .6s cubic-bezier(.2,.9,.2,1.4),filter .5s;filter:grayscale(.5) brightness(.75);box-shadow:0 30px 60px rgba(0,0,0,.6)}
-.shard:hover{transform:rotate(0deg) scale(1.08);z-index:20;filter:none}
-.shard img{display:block;width:100%;height:100%;object-fit:cover}
-.word{position:absolute;pointer-events:none}
-.big .peek{position:absolute;right:6%;top:50%;width:300px;aspect-ratio:3/2;object-fit:cover;opacity:0;transform:translateY(-50%) rotate(-6deg) scale(.85);transition:opacity .25s,transform .5s cubic-bezier(.2,.9,.2,1.3);pointer-events:none;z-index:3}
-.big:hover .peek{opacity:1;transform:translateY(-50%) rotate(4deg) scale(1)}
-.big .t{transition:color .2s,letter-spacing .5s cubic-bezier(.2,.9,.2,1)}
-.big:hover .t{color:#80A3B9;letter-spacing:.02em}
-.btn{transition:background .3s,color .3s,transform .4s cubic-bezier(.2,.9,.2,1.5)}.btn:hover{background:#FCFBF8;color:#000;transform:rotate(-3deg) scale(1.05)}
-.nav a{color:#FCFBF8}.nav a:hover{color:#80A3B9}
-.nav a.btn{color:#000}
-input::placeholder{color:#8F86A8}
-input:focus{outline:2px solid #80A3B9;outline-offset:2px}
-.torch-lit{-webkit-mask-image:radial-gradient(circle var(--tr,0px) at var(--tx,50%) var(--ty,50%),#000 0%,#000 45%,transparent 100%);mask-image:radial-gradient(circle var(--tr,0px) at var(--tx,50%) var(--ty,50%),#000 0%,#000 45%,transparent 100%)}
 .list li{position:relative;padding-left:30px;margin:0 0 14px}
-.list li::before{content:'ϟ';position:absolute;left:0;color:#80A3B9;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
-@media (max-width:760px){.shards{height:auto!important;padding:120px 4% 120px!important;display:grid;grid-template-columns:1fr 1fr;gap:14px}.shards .shard{position:relative;left:auto!important;top:auto!important;width:auto!important}.shards .word{display:none}.shards .btn{position:relative!important;left:auto!important;bottom:auto!important;grid-column:1/-1;justify-content:center}}
-@media (max-width:600px){.mfit{font-size:44px!important}.big .t{font-size:46px!important}.big>span{padding-left:0!important}}
-@media (prefers-reduced-motion:reduce){.storm,.flash,.bolt path,.glitch,.glitch2,.ml,.mr{animation:none}.storm{filter:brightness(.85)}}
+.list li::before{content:'๑';position:absolute;left:0;color:#80A3B9;font-style:normal;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
+@media (prefers-reduced-motion:reduce){.storm,.flash,.bolt path{animation:none}.storm{filter:brightness(.85)}}
 </style>
 </head>
 <body>
-<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #000; overflow: hidden">
+<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #060101; overflow: hidden">
 
-<header class="nav" style="position: absolute; top: 0; left: 0; right: 0; z-index: 30; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; padding: 26px 4%">
-<a href="/" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: #FCFBF8"><span class="g" style="color: #E2B877; font-style: normal">ϟ</span> Azul Perenne</a>
-<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">
+<header class="nav" style="position: absolute; top: 0; left: 0; right: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%">
+<a href="/" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; letter-spacing: 0.02em; color: #FCFBF8"><span class="g" style="color: #80A3B9; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase">
 <a href="/imaginario">Imaginario</a>
 <a href="/bitacora">Bitácora</a>
 <a href="/bitacora#movimiento">Movimiento</a>
 <a href="/bitacora#escritos">Escritos</a>
 <a href="#sobre">Sobre Azul</a>
-<span style="color: #80A3B9">ES / EN</span>
-<a href="/kit" class="btn" style="background: #80A3B9; padding: 11px 18px; letter-spacing: 0.2em">El Kit ϟ</a>
+<span style="color: #80A3B9; letter-spacing: 0.14em">ES <span style="opacity: 0.5">/</span> EN</span>
+<a href="/kit" class="btn btn-b" style="background: #80A3B9; color: #060101; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.18em">El Kit</a>
 </nav>
 </header>
 
-<section style="position: relative; height: 940px; overflow: hidden; background: #000">
+<section style="position: relative; height: 900px; display: flex; align-items: flex-end; overflow: hidden; background: #000">
 <img class="storm" src="images/0eb59c3be350e980585991aa8bb04dfa.jpg" alt="Noria junto al mar en la noche, iluminada por un relámpago" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
 <div class="flash" style="position: absolute; inset: 0; background: #EAF1FF; mix-blend-mode: overlay; pointer-events: none"></div>
 <svg class="bolt" viewBox="0 0 220 900" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 62%; top: -20px; width: 220px; height: 900px; pointer-events: none; filter: drop-shadow(0 0 12px #CFE3FF) drop-shadow(0 0 40px #8B7BC8)"><path d="M120 0 L92 170 L140 190 L70 400 L128 410 L40 640 L96 650 L20 900" fill="none" stroke="#F4F8FF" stroke-width="5" stroke-linejoin="miter"></path><path d="M70 400 L20 470 L34 520" fill="none" stroke="#F4F8FF" stroke-width="2.5"></path></svg>
-<svg class="bolt b2" viewBox="0 0 160 600" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 14%; top: -10px; width: 160px; height: 600px; pointer-events: none; filter: drop-shadow(0 0 14px #E2B877)"><path d="M90 0 L60 120 L100 132 L40 300 L86 310 L30 460 L70 470 L24 600" fill="none" stroke="#FFF2D6" stroke-width="4"></path></svg>
-<div style="position: absolute; left: 4%; right: 4%; bottom: 70px; z-index: 5">
-<p class="g" aria-hidden="true" style="position: absolute; left: 40%; top: -210px; margin: 0; font-size: 34px; color: #E2B877; transform: rotate(18deg)">✷</p>
-<p class="g" aria-hidden="true" style="position: absolute; right: 8%; top: -330px; margin: 0; font-size: 26px; color: #80A3B9">𖤓</p>
-<p class="g" aria-hidden="true" style="position: absolute; left: 10%; top: -380px; margin: 0; font-size: 22px; color: #8B7BC8">໑</p>
-<h1 style="margin: 0; line-height: 0.8; position: relative">
-<span class="anton glitch" style="display: block; font-size: clamp(120px, 23vw, 360px); color: transparent; -webkit-text-stroke: 2px #FCFBF8">Azul</span>
-<span class="glitch2" style="display: block; margin: -0.42em 0 0 18%; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(90px, 15vw, 240px); color: #CFC4EE; transform: rotate(-5deg); text-transform: none">perenne</span>
-</h1>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-top: 36px">
-<div style="max-width: 520px">
-<p style="margin: 0 0 10px; font-size: 13px; line-height: 1.6; letter-spacing: 0.22em; text-transform: uppercase; color: #CFC4EE">Un refugio creativo para quienes buscan sentido en lo invisible y lo visible…</p>
-<p style="margin: 0; font-size: 19px; line-height: 1.5">La naturaleza no es solo verde, también es <em style="color: #80A3B9">azul</em>…</p>
-</div>
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #80A3B9">arte · cultura local · ritual · movimiento</p>
+<svg class="bolt b2" viewBox="0 0 160 600" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 14%; top: -10px; width: 160px; height: 600px; pointer-events: none; filter: drop-shadow(0 0 14px #80A3B9)"><path d="M90 0 L60 120 L100 132 L40 300 L86 310 L30 460 L70 470 L24 600" fill="none" stroke="#EAF1FF" stroke-width="4"></path></svg>
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,1,1,0.5) 0%, rgba(6,1,1,0) 30%, rgba(6,1,1,0.15) 60%, #060101 100%); pointer-events: none"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 5% 96px; box-sizing: border-box">
+<p class="rise" style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9"><span class="g spin" style="color: #B38B59; margin-right: 12px">✷</span>arte · cultura local · ritual</p>
+<h1 class="rise2" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(64px, 11vw, 168px); line-height: 0.88; letter-spacing: -0.02em">Azul Perenne</h1>
+<p class="rise3" style="margin: 28px 0 0; max-width: 620px; font-size: 13px; line-height: 1.7; letter-spacing: 0.22em; text-transform: uppercase; color: #CFC4EE">Un refugio creativo para quienes buscan sentido en lo invisible y lo visible…</p>
+<p class="rise3" style="margin: 12px 0 0; max-width: 560px; font-size: 21px; line-height: 1.5; font-style: italic; font-weight: 300; color: #FCFBF8">La naturaleza no es solo verde, también es <span style="color: #80A3B9">azul</span>…</p>
+<div class="rise3" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px">
+<a href="/kit" class="btn btn-b" style="background: #80A3B9; color: #060101; padding: 16px 28px; border-radius: 999px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Recibe el Kit</a>
+<a href="/imaginario" class="btn btn-o" style="border: 1px solid rgba(252,251,248,0.5); color: #FCFBF8; padding: 15px 28px; border-radius: 999px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Ver Imaginario</a>
 </div>
 </div>
 </section>
 
-<div aria-hidden="true" style="position: relative; height: 230px; background: #000">
-<div style="position: absolute; left: -5%; right: -5%; top: 46px; transform: rotate(-4deg); background: #E2B877; color: #000; padding: 16px 0; overflow: hidden; white-space: nowrap; z-index: 2">
-<div class="ml anton" id="tapeA" style="display: inline-flex; gap: 34px; font-size: 40px"></div>
-</div>
-<div style="position: absolute; left: -5%; right: -5%; top: 104px; transform: rotate(3deg); background: #2A2140; color: #CFC4EE; padding: 14px 0; overflow: hidden; white-space: nowrap; border-top: 1px solid #5B4E80; border-bottom: 1px solid #5B4E80">
-<div class="mr" id="tapeB" style="display: inline-flex; gap: 34px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px"></div>
+<div style="background: #2A2140; border-top: 1px solid #3A2F57; border-bottom: 1px solid #3A2F57; padding: 22px 0; overflow: hidden; white-space: nowrap">
+<div class="marq" style="display: inline-flex; gap: 40px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: #CFC4EE">
+<span style="display: inline-flex; align-items: center; gap: 40px">Bitácora de viaje<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">✷</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Arte local<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">๑</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Yoga<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">𖤓</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Lenguaje simbólico<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">໑</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Ritual<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">꩜</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Fotografía analógica<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">✶</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Bitácora de viaje<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">✷</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Arte local<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">๑</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Yoga<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">𖤓</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Lenguaje simbólico<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">໑</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Ritual<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">꩜</span></span>
+<span style="display: inline-flex; align-items: center; gap: 40px">Fotografía analógica<span class="g" style="color: #B38B59; font-style: normal; font-size: 20px">✶</span></span>
+
 </div>
 </div>
 
-<section style="position: relative; padding: 110px 4% 130px; background: #000">
-<div style="max-width: 1240px; margin: 0 auto">
-<p style="margin: 0 0 18px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #80A3B9">Si no entiendes lo que digo…</p>
-<h2 class="anton mfit" style="margin: 0 0 22px; font-size: clamp(56px, 8vw, 120px); line-height: 0.9">¡Enhora<span style="color: #E2B877">buena!</span></h2>
-<p style="margin: 0 0 64px; max-width: 640px; font-size: 21px; line-height: 1.6; color: #E4E0EA">Siéntete en casa y detente aquí si esto resuena contigo y eres:</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px 72px">
+<section style="max-width: 1180px; margin: 0 auto; padding: 140px 5% 40px; box-sizing: border-box">
+<p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9">Si no entiendes lo que digo…</p>
+<h2 style="margin: 0 0 22px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(48px, 7vw, 96px); line-height: 1; letter-spacing: -0.01em">¡<em style="color: #CFC4EE">Enhorabuena</em>!</h2>
+<p style="margin: 0 0 64px; max-width: 620px; font-size: 20px; line-height: 1.65; color: #E4E0EA">Siéntete en casa y detente aquí si esto resuena contigo y eres:</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px 72px">
 <ul class="list" style="margin: 0; padding: 0; list-style: none; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.25">
 <li>lector entrelíneas</li>
 <li>explorador de la palabra y el cuerpo</li>
@@ -109,8 +108,8 @@ input:focus{outline:2px solid #80A3B9;outline-offset:2px}
 <li>amante del lujo ético y consciente</li>
 </ul>
 <div>
-<p style="margin: 0 0 18px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #CFC4EE">Y también si:</p>
-<ul class="list" style="margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.55; color: #B9B3C9">
+<p style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #CFC4EE">Y también si:</p>
+<ul class="list" style="margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; color: #B9B3C9">
 <li>le temes a la oscuridad, no te gusta el dolor, pero son tus grandes compañeros</li>
 <li>no sabes quién eres y quieres entender por qué no saber puede ser tu mejor talento</li>
 <li>te sientes desconectado y solo quieres divertirte</li>
@@ -120,142 +119,152 @@ input:focus{outline:2px solid #80A3B9;outline-offset:2px}
 </ul>
 </div>
 </div>
-<blockquote style="margin: 100px 0 0; padding: 0; border: 0; text-align: center">
-<p style="margin: 0 auto; max-width: 900px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(32px, 4vw, 54px); line-height: 1.2; color: #CFC4EE">❝Bienaventurados los pobres de espíritu porque de ellos es el Reino de los Cielos❞</p>
-<p style="margin: 28px auto 0; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B9B3C9">…no se trata de creer, sino de explorar juntos el sentido espiritual que late en cada tradición.</p>
+<blockquote style="margin: 110px 0 0; padding: 0; text-align: center">
+<p style="margin: 0 auto; max-width: 880px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(30px, 3.8vw, 50px); line-height: 1.25; color: #CFC4EE">❝Bienaventurados los pobres de espíritu porque de ellos es el Reino de los Cielos❞</p>
+<p style="margin: 28px auto 0; max-width: 620px; font-size: 18px; line-height: 1.65; color: #B9B3C9">…no se trata de creer, sino de explorar juntos el sentido espiritual que late en cada tradición.</p>
 </blockquote>
-<p style="margin: 70px auto 0; max-width: 760px; text-align: center; font-size: 13px; line-height: 1.8; letter-spacing: 0.24em; text-transform: uppercase; color: #80A3B9">Recuerda: tú, allá afuera, en la gran naturaleza, ni siquiera tienes un nombre <span class="g" style="color: #E2B877; letter-spacing: 0">𖤓</span></p>
-</div>
+<p style="margin: 64px auto 0; max-width: 760px; text-align: center; font-size: 13px; line-height: 1.9; letter-spacing: 0.24em; text-transform: uppercase; color: #80A3B9">Recuerda: tú, allá afuera, en la gran naturaleza, ni siquiera tienes un nombre <span class="g" style="color: #B38B59; letter-spacing: 0">𖤓</span></p>
 </section>
 
-<section style="position: relative; padding: 120px 4% 140px; background: #000; border-top: 1px solid #1E1A26">
-<div style="max-width: 1360px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div style="flex: 1 1 320px; max-width: 420px">
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #80A3B9">Mueve la luz</p>
-<h2 class="anton" style="margin: 0 0 22px; font-size: clamp(56px, 7vw, 104px); line-height: 0.9">Todo está<br><span style="color: #E2B877">en lo oscuro</span></h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B9B3C9">Pasa el cursor sobre la imagen. Lo que buscas aparece cuando la luz lo toca.</p>
+<section style="max-width: 1280px; margin: 0 auto; padding: 140px 5% 120px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 64px">
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -0.01em">Tres <em style="color: #80A3B9">corrientes</em></h2>
+<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: #B9B3C9">Un viaje para aprender de quienes habitan cada lugar. Lo que encuentro vuelve aquí.</p>
 </div>
-<div id="torch" style="flex: 1 1 560px; position: relative; aspect-ratio: 3 / 2; background: #050407; overflow: hidden; border-radius: 2px; cursor: crosshair">
-<img src="images/960995ba0f0ce2c47f28d92c67590ccd.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.07)">
-<img class="torch-lit" src="images/960995ba0f0ce2c47f28d92c67590ccd.jpg" alt="Río entre rocas con luces de colores, revelado por la linterna" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(1.25) saturate(1.2)">
-<p style="position: absolute; left: 20px; bottom: 16px; margin: 0; font-size: 13px; letter-spacing: 0.3em; color: #8A8496; text-transform: uppercase"><span class="g">✶</span> sin editar</p>
-</div>
-</div>
-</section>
-
-<section class="shards" style="position: relative; height: 1120px; background: #000; overflow: hidden">
-<p class="anton word" aria-hidden="true" style="left: 3%; top: 40px; margin: 0; font-size: clamp(90px, 14vw, 220px); line-height: 0.85; color: transparent; -webkit-text-stroke: 1.5px #3A2F57; z-index: 0">Imagi<br>nario</p>
-<a href="/imaginario" class="shard" style="--r: -8deg; left: 6%; top: 260px; width: 30%; aspect-ratio: 3 / 2; z-index: 2"><img src="images/24c08fc32356db81a3bb705ec5def398.jpg" alt="Atardecer en el mar"></a>
-<a href="/imaginario" class="shard" style="--r: 6deg; left: 30%; top: 150px; width: 22%; aspect-ratio: 3 / 4; z-index: 3"><img src="images/9621cdc63cec7be316b312fc3c792b3d.jpg" alt="Flores en la noche"></a>
-<a href="/imaginario" class="shard" style="--r: -3deg; left: 55%; top: 90px; width: 36%; aspect-ratio: 3 / 2; z-index: 2"><img src="images/be0e5c5ba44e73c5cc0343d9f20f7133.jpg" alt="Multitud con fuga de luz roja"></a>
-<a href="/imaginario" class="shard" style="--r: 11deg; left: 68%; top: 470px; width: 24%; aspect-ratio: 3 / 2; z-index: 4"><img src="images/1703abbbded9f3905bc0306c14c9c39c.jpg" alt="Helado en la calle"></a>
-<a href="/imaginario" class="shard" style="--r: -14deg; left: 40%; top: 560px; width: 26%; aspect-ratio: 3 / 2; z-index: 5"><img src="images/e98cca400aaf95506cdb0e4c5c2150d5.jpg" alt="Siluetas al atardecer, doble exposición"></a>
-<a href="/imaginario" class="shard" style="--r: 4deg; left: 12%; top: 640px; width: 24%; aspect-ratio: 3 / 2; z-index: 3"><img src="images/dd6c2a5a1617db6bb08cc2f6e74fc9fa.jpg" alt="Lago con fuga de luz roja"></a>
-<a href="/imaginario" class="shard" style="--r: -6deg; left: 84%; top: 760px; width: 14%; aspect-ratio: 9 / 16; z-index: 6; background: #000"><img src="images/2f8a09f2d877633b68d1960b24472a33.jpg" alt="Mariposa azul"></a>
-<p class="word" aria-hidden="true" style="left: 30%; top: 470px; margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 64px; color: #E2B877; transform: rotate(-12deg); z-index: 8">destellos</p>
-<p class="word anton" aria-hidden="true" style="left: 4%; top: 560px; margin: 0; font-size: 30px; color: #80A3B9; transform: rotate(90deg); transform-origin: left top; z-index: 8">fotografía analógica</p>
-<p class="word g" aria-hidden="true" style="left: 62%; top: 420px; margin: 0; font-size: 48px; color: #CFC4EE; z-index: 8">✷</p>
-<a href="/imaginario" class="btn" style="position: absolute; left: 6%; bottom: 70px; z-index: 10; display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; background: #80A3B9; color: #000; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">Entrar al Imaginario →</a>
-</section>
-
-<section style="background: #000; border-top: 1px solid #1E1A26">
-<p style="margin: 0; padding: 60px 4% 10px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #80A3B9">¿Qué encuentras aquí?</p>
-<a href="/bitacora" class="big" style="position: relative; display: block; padding: 34px 4%; border-bottom: 1px solid #1E1A26; color: #FCFBF8; overflow: hidden">
-<span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px"><span style="font-size: 13px; letter-spacing: 0.2em; color: #80A3B9">01</span><span class="anton t" style="font-size: clamp(64px, 10vw, 160px); line-height: 0.95">Bitácora</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px; color: #B9B3C9">arte y cultura local</span></span>
-<img class="peek" src="images/213b7374467d720cc1cbd5e84a139419.jpg" alt="">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
+<a href="/bitacora" class="zoom" style="display: block; color: #FCFBF8">
+<div class="zoom" style="aspect-ratio: 4 / 5; border-radius: 220px 220px 4px 4px"><img src="images/213b7374467d720cc1cbd5e84a139419.jpg" alt="Balcón frente al mar al atardecer" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<p class="g" style="margin: 24px 0 6px; color: #B38B59; font-size: 20px">𖤓</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 38px">Bitácora</h3>
+<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #B9B3C9">Arte, oficios y cultura local, aprendidos de su gente.</p>
 </a>
-<a href="/bitacora#movimiento" class="big" style="position: relative; display: block; padding: 34px 4%; border-bottom: 1px solid #1E1A26; color: #FCFBF8; overflow: hidden">
-<span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; padding-left: 10%"><span style="font-size: 13px; letter-spacing: 0.2em; color: #80A3B9">02</span><span class="anton t" style="font-size: clamp(64px, 10vw, 160px); line-height: 0.95">Movimiento</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px; color: #B9B3C9">yoga en video</span></span>
-<img class="peek" src="images/f77ce3b0ca48575d56637a0fcc5d6946.jpg" alt="">
+<a href="/bitacora#movimiento" style="display: block; color: #FCFBF8">
+<div class="zoom" style="aspect-ratio: 4 / 5; border-radius: 220px 220px 4px 4px"><img src="images/f77ce3b0ca48575d56637a0fcc5d6946.jpg" alt="Tronco de árbol visto desde abajo con destello de sol" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<p class="g" style="margin: 24px 0 6px; color: #B38B59; font-size: 20px">꩜</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 38px">Movimiento</h3>
+<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #B9B3C9">Yoga en video. El cuerpo como primera lengua.</p>
 </a>
-<a href="/bitacora#escritos" class="big" style="position: relative; display: block; padding: 34px 4%; border-bottom: 1px solid #1E1A26; color: #FCFBF8; overflow: hidden">
-<span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; padding-left: 4%"><span style="font-size: 13px; letter-spacing: 0.2em; color: #80A3B9">03</span><span class="anton t" style="font-size: clamp(64px, 10vw, 160px); line-height: 0.95">Escritos</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px; color: #B9B3C9">lenguaje simbólico</span></span>
-<img class="peek" src="images/3232f43f638967860a5aa85766f0bb69.jpg" alt="">
+<a href="/bitacora#escritos" style="display: block; color: #FCFBF8">
+<div class="zoom" style="aspect-ratio: 4 / 5; border-radius: 220px 220px 4px 4px"><img src="images/3232f43f638967860a5aa85766f0bb69.jpg" alt="Mano extendida sobre un arroyo" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<p class="g" style="margin: 24px 0 6px; color: #B38B59; font-size: 20px">໑</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 38px">Escritos</h3>
+<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #B9B3C9">Lenguaje simbólico, para leer entre líneas.</p>
 </a>
-</section>
-
-<section style="position: relative; background: #0C0A14; padding: 140px 5%; text-align: center; overflow: hidden">
-<img src="images/2f8a09f2d877633b68d1960b24472a33.jpg" alt="" aria-hidden="true" style="width: 180px; height: auto; display: block; margin: 0 auto 40px; mix-blend-mode: lighten">
-<div style="max-width: 820px; margin: 0 auto; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.45">
-<p style="margin: 0; color: #CFD9E2">azul es noche, es mar, es cielo…</p>
-<p style="margin: 0; color: #CFD9E2">es brisa, es agua, es lágrima, es hielo…</p>
-<p style="margin: 28px 0 0; color: #CFC4EE">cuando caigo en mi raíz, realmente no estoy cayendo…</p>
-<p style="margin: 0; color: #CFC4EE">pues azul es lago, es eterno, es sereno…</p>
-<p style="margin: 28px 0 0; color: #80A3B9">y cuando muero, realmente no estoy muriendo…</p>
-<p style="margin: 0; color: #80A3B9">azul es constancia, es memoria, es silencio…</p>
 </div>
-<p class="g" aria-hidden="true" style="margin: 40px 0 0; font-size: 22px; letter-spacing: 1.2em; color: #E2B877">๑ ✷ 𖤓 ໑ ꩜</p>
 </section>
 
-<section style="position: relative; padding: 140px 4% 130px; background: #000; overflow: hidden">
-<svg class="bolt b2" viewBox="0 0 160 600" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 4%; top: 0; width: 140px; height: 520px; pointer-events: none; filter: drop-shadow(0 0 14px #80A3B9)"><path d="M90 0 L60 120 L100 132 L40 300 L86 310 L30 460 L70 470 L24 600" fill="none" stroke="#EAF1FF" stroke-width="4"></path></svg>
-<div style="position: relative; max-width: 900px; margin: 0 auto; z-index: 2">
-<p class="g" aria-hidden="true" style="margin: 0 0 18px; font-size: 24px; color: #80A3B9">໑</p>
-<h2 class="anton" style="margin: 0 0 40px; font-size: clamp(44px, 6vw, 88px); line-height: 0.95">Para los devotos de la calma <span style="color: #80A3B9">y la profundidad…</span></h2>
-<p style="margin: 0 0 40px; font-size: 21px; line-height: 1.75; color: #E4E0EA">Sumérgete en las tinieblas, permite al agua entrar en tu cuerpo y sentir la barrera del mar de vidrio en tus manos cuando quieres salir a respirar. Atraviesa el dolor, recuerda que fue una promesa volver a esta vida sabiendo que volverás a morir, pero no todo lo que fue tuyo se irá contigo;</p>
-<p style="margin: 0 0 30px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: #CFC4EE">dime… humana:</p>
-<p style="margin: 0 0 20px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.2">¿A qué quieres darle una vida eterna en esta vida antes de dormir eternamente?</p>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.2; color: #E2B877">¿Eres realmente capaz de compartir tu perennidad con aquello que no se va contigo?</p>
-<p class="g" aria-hidden="true" style="margin: 40px 0 0; font-size: 24px; color: #80A3B9">꩜</p>
+<section style="padding: 40px 0 140px">
+<div style="max-width: 1280px; margin: 0 auto 48px; padding: 0 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div>
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9">Fotografía analógica</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(44px, 6vw, 80px); line-height: 1">Imaginario</h2>
+</div>
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.08em; color: #B9B3C9"><span class="g" style="color: #B38B59">✶</span> ninguna fotografía ha sido editada <span class="g" style="color: #B38B59">✶</span></p>
+</div>
+<div style="overflow: hidden; white-space: nowrap">
+<div class="strip" style="display: inline-flex; gap: 18px">
+<img src="images/24c08fc32356db81a3bb705ec5def398.jpg" alt="Atardecer en el mar" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/0eb59c3be350e980585991aa8bb04dfa.jpg" alt="Noria junto al mar con destello rojo" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/5c2dcdd2e011994f7a6b0c83c8da0c17.jpg" alt="Cielo reflejado en el agua" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/1703abbbded9f3905bc0306c14c9c39c.jpg" alt="Mujer comiendo helado en la calle" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/d07fb9e91faebab675468ed64331ba68.jpg" alt="Flores amarillas contra el cielo" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/960995ba0f0ce2c47f28d92c67590ccd.jpg" alt="Río con luces de colores" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/e98cca400aaf95506cdb0e4c5c2150d5.jpg" alt="Pareja en silueta, doble exposición" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/dd6c2a5a1617db6bb08cc2f6e74fc9fa.jpg" alt="Lago con fuga de luz roja" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/8eafd7e89e410a47218bb43c02e2b45a.jpg" alt="Persona sentada en la playa" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/2467881d4b9162ca774cf342abc6edff.jpg" alt="Noche en la ciudad" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/c6c7de89a9490767bb07ad3c5621550a.jpg" alt="Palmera en doble exposición" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/86c4e6e129026cbc321c6474cc4031d6.jpg" alt="Concierto con luces de escenario" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/24c08fc32356db81a3bb705ec5def398.jpg" alt="Atardecer en el mar" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/0eb59c3be350e980585991aa8bb04dfa.jpg" alt="Noria junto al mar con destello rojo" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/5c2dcdd2e011994f7a6b0c83c8da0c17.jpg" alt="Cielo reflejado en el agua" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/1703abbbded9f3905bc0306c14c9c39c.jpg" alt="Mujer comiendo helado en la calle" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/d07fb9e91faebab675468ed64331ba68.jpg" alt="Flores amarillas contra el cielo" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/960995ba0f0ce2c47f28d92c67590ccd.jpg" alt="Río con luces de colores" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/e98cca400aaf95506cdb0e4c5c2150d5.jpg" alt="Pareja en silueta, doble exposición" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/dd6c2a5a1617db6bb08cc2f6e74fc9fa.jpg" alt="Lago con fuga de luz roja" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/8eafd7e89e410a47218bb43c02e2b45a.jpg" alt="Persona sentada en la playa" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/2467881d4b9162ca774cf342abc6edff.jpg" alt="Noche en la ciudad" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/c6c7de89a9490767bb07ad3c5621550a.jpg" alt="Palmera en doble exposición" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+<img src="images/86c4e6e129026cbc321c6474cc4031d6.jpg" alt="Concierto con luces de escenario" loading="lazy" style="height: 380px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 3px">
+
+</div>
+</div>
+<div style="max-width: 1280px; margin: 40px auto 0; padding: 0 5%; box-sizing: border-box">
+<a href="/imaginario" style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #B38B59; border-bottom: 1px solid #B38B59; padding-bottom: 6px">Ver el portafolio completo →</a>
 </div>
 </section>
 
 <section id="sobre" style="max-width: 1280px; margin: 0 auto; padding: 60px 5% 140px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
-<div style="flex: 1 1 380px; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 2px"><img src="images/1a9242b3773b70741a5fe278abfce49f.jpg" alt="Camila sonriendo con pañuelo violeta, otoño" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block"></div>
+<div class="zoom" style="flex: 1 1 380px; aspect-ratio: 4 / 5; border-radius: 4px"><img src="images/1a9242b3773b70741a5fe278abfce49f.jpg" alt="Camila sonriendo con pañuelo violeta, otoño" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block"></div>
 <div style="flex: 1 1 420px">
-<p style="margin: 0 0 16px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #80A3B9">Sobre Azul y quién está detrás…</p>
+<p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9">Sobre Azul y quién está detrás…</p>
 <h2 style="margin: 0 0 28px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.05">Soy <em style="color: #CFC4EE">Camila</em>.</h2>
 <p style="margin: 0 0 18px; font-size: 19px; line-height: 1.7; color: #E4E0EA">Fotografío, escribo y practico yoga. Ahora salgo a recorrer otros países para aprender de su gente y traer de vuelta lo que encuentre.</p>
-<p style="margin: 0 0 30px; font-size: 19px; line-height: 1.7; color: #B9B3C9; font-style: italic">Perenne es lo que atraviesa los años.</p>
+<p style="margin: 0 0 36px; font-size: 19px; line-height: 1.7; color: #B9B3C9; font-style: italic">Perenne es lo que atraviesa los años.</p>
 <blockquote style="margin: 0; padding: 26px 0 0; border-top: 1px solid #2A2433">
 <p style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: 0.16em; text-transform: uppercase; color: #CFC4EE">Paciencia en el lago —silencio—. Gota a gota, va haciéndose espacio hacia el cielo… que siempre fue su reino (…) hasta convertirse en agua de nube, esponjosa… jugosa… jadeando en aquel propósito por el que decidió nacer.</p>
-<p style="margin: 16px 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: #80A3B9">Camila.</p>
+<p style="margin: 16px 0 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: #80A3B9">Camila.</p>
 </blockquote>
 </div>
 </section>
 
-<section style="position: relative; padding: 150px 4% 160px; background: #000; overflow: hidden; border-top: 1px solid #1E1A26">
-<svg class="bolt b3" viewBox="0 0 300 900" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; right: 6%; top: 0; width: 300px; height: 100%; pointer-events: none; filter: drop-shadow(0 0 16px #E2B877) drop-shadow(0 0 50px #8B7BC8)"><path d="M180 0 L130 220 L200 236 L90 520 L170 534 L60 900" fill="none" stroke="#FFF2D6" stroke-width="6"></path></svg>
-<svg viewBox="0 0 120 200" aria-hidden="true" style="position: absolute; left: -40px; top: 40px; width: 420px; height: 700px; opacity: 0.12"><path d="M70 0 L20 110 L58 110 L38 200 L100 80 L62 80 L82 0 Z" fill="#E2B877"></path></svg>
-<div style="position: relative; max-width: 1100px; margin: 0 auto; z-index: 2">
-<p class="g" aria-hidden="true" style="margin: 0 0 18px; font-size: 26px; color: #E2B877">ϟ 𖦹</p>
-<h2 style="margin: 0; line-height: 0.88"><span class="anton" style="display: block; font-size: clamp(70px, 11vw, 170px)">El Kit</span><span style="display: block; margin: -0.2em 0 0 22%; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(60px, 8vw, 128px); color: #CFC4EE">Perenne</span></h2>
-<p style="margin: 34px 0 30px; max-width: 520px; font-size: 20px; line-height: 1.6; color: #E4E0EA">Una práctica, un ritual y cartas desde el camino. Esto no es solo un newsletter, es un portal.</p>
-<form onsubmit="event.preventDefault();try{sessionStorage.setItem('kitEmail',document.getElementById('r-email').value)}catch(e){}location.href='/kit'" style="display: flex; flex-wrap: wrap; gap: 12px; max-width: 640px">
-<label for="r-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Correo electrónico</label>
-<input id="r-email" type="email" placeholder="tu correo electrónico" style="flex: 1 1 260px; min-height: 58px; padding: 0 20px; border: 1px solid #5B4E80; border-radius: 0; background: #0C0A14; color: #FCFBF8; font: inherit; font-size: 17px; box-sizing: border-box">
-<button type="submit" class="btn" style="min-height: 58px; padding: 0 30px; border: 0; background: #80A3B9; color: #000; font: inherit; font-size: 14px; letter-spacing: 0.24em; text-transform: uppercase; cursor: pointer">Abrir el portal ϟ</button>
+<section style="position: relative; background: #0C0A14; padding: 140px 5%; text-align: center; overflow: hidden">
+<img class="float" src="images/2f8a09f2d877633b68d1960b24472a33.jpg" alt="Mariposa azul sobre fondo negro" style="width: 220px; height: auto; display: block; margin: 0 auto 40px; mix-blend-mode: lighten">
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #CFD9E2">azul es noche, es mar, es cielo…</p>
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #CFD9E2">es brisa, es agua, es lágrima, es hielo…</p>
+<p style="margin: 28px auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #CFC4EE">cuando caigo en mi raíz, realmente no estoy cayendo…</p>
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #CFC4EE">pues azul es lago, es eterno, es sereno…</p>
+<p style="margin: 28px auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #80A3B9">y cuando muero, realmente no estoy muriendo…</p>
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #80A3B9">azul es constancia, es memoria, es silencio…</p>
+<p class="g" style="margin: 40px 0 0; font-size: 22px; letter-spacing: 1.2em; color: #B38B59">๑ ✷ 𖤓 ໑ ꩜</p>
+</section>
+
+<section style="max-width: 900px; margin: 0 auto; padding: 140px 5% 120px; box-sizing: border-box">
+<p class="g" style="margin: 0 0 18px; font-size: 22px; color: #B38B59">໑</p>
+<h2 style="margin: 0 0 36px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02">Para los devotos de la calma <em style="color: #80A3B9">y la profundidad…</em></h2>
+<p style="margin: 0 0 36px; font-size: 20px; line-height: 1.8; color: #E4E0EA">Sumérgete en las tinieblas, permite al agua entrar en tu cuerpo y sentir la barrera del mar de vidrio en tus manos cuando quieres salir a respirar. Atraviesa el dolor, recuerda que fue una promesa volver a esta vida sabiendo que volverás a morir, pero no todo lo que fue tuyo se irá contigo;</p>
+<p style="margin: 0 0 26px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: #CFC4EE">dime… humana:</p>
+<p style="margin: 0 0 18px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.25">¿A qué quieres darle una vida eterna en esta vida antes de dormir eternamente?</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.25; color: #80A3B9">¿Eres realmente capaz de compartir tu perennidad con aquello que no se va contigo?</p>
+<p class="g" style="margin: 36px 0 0; font-size: 22px; color: #B38B59">꩜</p>
+</section>
+
+<section style="padding: 120px 5%">
+<div style="max-width: 1180px; margin: 0 auto; background: #2A2140; border: 1px solid #3A2F57; border-radius: 6px; display: flex; flex-wrap: wrap; overflow: hidden">
+<div class="zoom" style="flex: 1 1 360px; min-height: 420px"><img src="images/185cf54845b611c177fdcf45ef51d616.jpg" alt="Nubes inmensas sobre un camino abierto" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<div style="flex: 1 1 440px; padding: 64px 56px; box-sizing: border-box">
+<p class="g" style="margin: 0 0 18px; color: #B38B59; font-size: 22px">𖦹</p>
+<h2 style="margin: 0 0 18px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 60px); line-height: 1.02">El <em style="color: #CFC4EE">Kit</em> Perenne</h2>
+<p style="margin: 0 0 32px; font-size: 18px; line-height: 1.65; color: #E4E0EA">Una práctica, un ritual y cartas desde el camino, directo a tu correo.</p>
+<form onsubmit="event.preventDefault();try{sessionStorage.setItem('kitEmail',document.getElementById('m-email').value)}catch(e){}location.href='/kit'" style="display: flex; flex-wrap: wrap; gap: 12px">
+<label for="m-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Correo electrónico</label>
+<input id="m-email" type="email" placeholder="tu correo electrónico" style="flex: 1 1 240px; min-height: 52px; padding: 0 20px; border-radius: 999px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
+<button type="submit" class="btn btn-b" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 0; border-radius: 999px; background: #80A3B9; color: #060101; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Quiero el kit</button>
 </form>
+<p style="margin: 18px 0 0; font-size: 13px; color: #A69CC2">Esto no es solo un newsletter, es un portal.</p>
+</div>
 </div>
 </section>
 
-<footer style="border-top: 1px solid #1E1A26; padding: 44px 4%; background: #000">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
-<p class="anton" style="margin: 0; font-size: 34px; color: transparent; -webkit-text-stroke: 1px #FCFBF8">Azul Perenne</p>
-<nav class="nav" style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase">
+<footer style="border-top: 1px solid #1E1A26; padding: 64px 5% 48px">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+<div>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px">Azul Perenne</p>
+<p class="g" style="margin: 10px 0 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
+</div>
+<nav class="nav" style="display: flex; flex-wrap: wrap; gap: 14px 32px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">
 <a href="/imaginario">Imaginario</a>
 <a href="/bitacora">Bitácora</a>
 <a href="/kit">El Kit</a>
 <a href="#sobre">Sobre Azul</a>
+<span style="color: #80A3B9">Instagram [@USUARIO]</span>
 </nav>
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.14em; color: #8A8496">© 2026 · ES / EN · Instagram [@USUARIO]</p>
 </div>
+<p style="max-width: 1280px; margin: 48px auto 0; font-size: 12px; letter-spacing: 0.12em; color: #8A8496">© 2026 Azul Perenne · ES / EN</p>
 </footer>
+
 </div>
 
-<script>
-(function(){
-  var a=['Arte','ϟ','Cultura local','ϟ','Aprender','ϟ','Yoga','ϟ','Ritual','ϟ','Caos','ϟ'];
-  var b=['lo único permanente es el movimiento','✷','azul es noche, es mar, es cielo','๑','la luz llega de golpe','𖤓'];
-  function fill(id,list){var el=document.getElementById(id);list.concat(list,list).forEach(function(w){var s=document.createElement('span');s.textContent=w;el.appendChild(s);});}
-  fill('tapeA',a);fill('tapeB',b);
-  var t=document.getElementById('torch'),lit=t.querySelector('.torch-lit');
-  function move(x,y){var r=t.getBoundingClientRect();lit.style.setProperty('--tr','160px');lit.style.setProperty('--tx',((x-r.left)/r.width*100)+'%');lit.style.setProperty('--ty',((y-r.top)/r.height*100)+'%');}
-  t.addEventListener('mousemove',function(e){move(e.clientX,e.clientY);});
-  t.addEventListener('touchmove',function(e){var p=e.touches[0];move(p.clientX,p.clientY);},{passive:true});
-  t.addEventListener('mouseleave',function(){lit.style.setProperty('--tr','0px');});
-  t.addEventListener('touchend',function(){lit.style.setProperty('--tr','0px');});
-})();
-</script>
 </body>
 </html>
