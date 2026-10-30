@@ -85,7 +85,7 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 
 <div id="lb" class="fade" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" hidden style="position: fixed; inset: 0; z-index: 50; background: rgba(6,1,1,0.94); flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 32px; box-sizing: border-box">
 <img id="lb-img" src="" alt="" style="max-width: 92%; max-height: 76%; object-fit: contain; display: block; border-radius: 2px">
-<p id="lb-cap" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #CFD9E2"></p>
+<p id="lb-cap" hidden></p>
 <div style="display: flex; gap: 12px">
 <button type="button" class="ctl" id="lb-prev" aria-label="Anterior" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font-size: 20px">←</button>
 <button type="button" class="ctl" id="lb-close" style="height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Cerrar</button>
@@ -116,10 +116,10 @@ function render(){
     return '<button type="button" class="chip" data-k="'+k+'" aria-pressed="'+on+'" style="'+chipStyle(on)+'">'+(k==='todo'?'Todo':S[k])+' <span style="opacity: 0.6; margin-left: 6px">'+n+'</span></button>';
   }).join('');
   grid.innerHTML=list.map(function(p,i){
-    return '<button type="button" class="tile fade" data-i="'+i+'" aria-label="Ampliar: '+esc(p.alt)+'"><img src="'+p.src+'" alt="'+esc(p.alt)+'" loading="lazy"><span class="cap">'+p.serieName+' <span class="g" style="font-style: normal; color: #B38B59">·</span> '+esc(p.alt)+'</span></button>';
+    return '<button type="button" class="tile fade" data-i="'+i+'" aria-label="Ampliar: '+esc(p.alt)+'"><img src="'+p.src+'" alt="'+esc(p.alt)+'" loading="lazy"></button>';
   }).join('');
 }
-function open(i){cur=(i+list.length)%list.length;var p=list[cur];li.src=p.src;li.alt=p.alt;lc.textContent=p.serieName+' · '+p.alt;lb.hidden=false;document.getElementById('lb-close').focus();}
+function open(i){cur=(i+list.length)%list.length;var p=list[cur];li.src=p.src;li.alt=p.alt;lc.textContent='';lb.hidden=false;document.getElementById('lb-close').focus();}
 function close(){lb.hidden=true;cur=-1;}
 chips.addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(b){f=b.getAttribute('data-k');render();}});
 grid.addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(b)open(+b.getAttribute('data-i'));});
