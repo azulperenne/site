@@ -26,11 +26,18 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 .pill{transition:background .3s,color .3s,border-color .3s;cursor:pointer}.pill:hover{border-color:#80A3B9}
 .item{transition:transform .6s cubic-bezier(.2,.7,.2,1),border-color .5s}.item:hover{transform:translateY(-6px);border-color:#B38B59}
 .nav a{color:#FCFBF8}.nav a:hover{color:#B38B59}
-input::placeholder{color:#8F86A8}
+input::placeholder{color:#8A8F96}
 input:focus{outline:2px solid #B38B59;outline-offset:2px}
 @media (prefers-reduced-motion:reduce){.kb,.float,.rise,.rise2,.strip,.spin{animation:none}}
-.pill{min-height:44px;padding:0 18px;border-radius:999px;font-family:inherit;font-size:13px;letter-spacing:.1em;border:1px solid #5B4E80;background:transparent;color:#E4E0EA}
+.pill{min-height:44px;padding:0 18px;border-radius:999px;font-family:inherit;font-size:13px;letter-spacing:.1em;border:1px solid #6B6F76;background:transparent;color:#E6E7E9}
 .pill[aria-pressed="true"]{border-color:#80A3B9;background:#80A3B9;color:#060101}
+/* tornasol · ojo de gato */
+[style*="#16171B"]{background-image:linear-gradient(105deg,transparent 30%,rgba(201,206,214,.10) 41%,rgba(214,170,120,.20) 48%,rgba(150,196,206,.12) 55%,transparent 68%),linear-gradient(160deg,#1C1D21 0%,#111215 55%,#1B1712 100%)!important;background-size:260% 100%,100% 100%!important;animation:catseye 11s ease-in-out infinite!important;border-color:#4A463F!important}
+@keyframes catseye{0%,100%{background-position:115% 0,0 0}50%{background-position:-15% 0,0 0}}
+[style*="color: #D9DEE5"]{background-image:linear-gradient(100deg,#E6E8EC 0%,#C9A27A 22%,#A9C9CF 44%,#E6E8EC 62%,#B98A5A 82%,#E6E8EC 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:tornasol 14s linear infinite}
+[style*="color: #D9DEE5"] *{-webkit-text-fill-color:currentColor}
+@keyframes tornasol{to{background-position:300% 0}}
+@media (prefers-reduced-motion:reduce){[style*="#16171B"],[style*="color: #D9DEE5"]{animation:none!important}}
 </style>
 </head>
 <body>
@@ -55,24 +62,24 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 <div class="rise" style="flex: 1 1 440px; max-width: 560px">
 <img class="float" src="images/2f8a09f2d877633b68d1960b24472a33.jpg" alt="" aria-hidden="true" style="width: 96px; height: auto; display: block; margin-bottom: 20px; mix-blend-mode: lighten">
 <p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9">Gratis · directo a tu correo</p>
-<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(56px, 8vw, 116px); line-height: 0.92; letter-spacing: -0.02em">El <em style="color: #CFC4EE">Kit</em> Perenne</h1>
-<p style="margin: 28px 0 0; font-size: 21px; line-height: 1.6; color: #E4E0EA">Una práctica, un ritual y cartas desde el camino.</p>
-<p style="margin: 14px 0 0; font-size: 16px; font-style: italic; color: #B9B3C9">Esto no es solo un newsletter, es un portal.</p>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(56px, 8vw, 116px); line-height: 0.92; letter-spacing: -0.02em">El <em style="color: #D9DEE5">Kit</em> Perenne</h1>
+<p style="margin: 28px 0 0; font-size: 21px; line-height: 1.6; color: #E6E7E9">Una práctica, un ritual y cartas desde el camino.</p>
+<p style="margin: 14px 0 0; font-size: 16px; font-style: italic; color: #B4B8BE">Esto no es solo un newsletter, es un portal.</p>
 </div>
 
-<div class="rise2" style="flex: 1 1 400px; max-width: 470px; background: rgba(27,20,38,0.88); border: 1px solid #3A2F57; border-radius: 8px; padding: 40px; box-sizing: border-box">
+<div class="rise2" style="flex: 1 1 400px; max-width: 470px; background: rgba(18,19,22,0.9); border: 1px solid #4A463F; border-radius: 8px; padding: 40px; box-sizing: border-box">
 <form id="kit-form" method="post" target="kit-sink" novalidate style="display: flex; flex-direction: column; gap: 18px; margin: 0">
 <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.1">Abre el portal</p>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="k-name" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Nombre</label>
-<input id="k-name" name="first_name" type="text" autocomplete="given-name" placeholder="cómo te llamas" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
+<label for="k-name" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #D9DEE5">Nombre</label>
+<input id="k-name" name="first_name" type="text" autocomplete="given-name" placeholder="cómo te llamas" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #6B6F76; background: #101114; color: #FCFBF8; font: inherit; font-size: 16px">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="k-email" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Correo electrónico</label>
-<input id="k-email" name="email_address" type="email" required autocomplete="email" placeholder="tu@correo.com" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #5B4E80; background: #120E1D; color: #FCFBF8; font: inherit; font-size: 16px">
+<label for="k-email" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #D9DEE5">Correo electrónico</label>
+<input id="k-email" name="email_address" type="email" required autocomplete="email" placeholder="tu@correo.com" style="min-height: 52px; padding: 0 18px; border-radius: 6px; border: 1px solid #6B6F76; background: #101114; color: #FCFBF8; font: inherit; font-size: 16px">
 </div>
 <div>
-<p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Me interesa</p>
+<p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #D9DEE5">Me interesa</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <button type="button" class="pill" data-topic="bitacora" aria-pressed="true">Bitácora</button>
 <button type="button" class="pill" data-topic="movimiento" aria-pressed="true">Movimiento</button>
@@ -81,7 +88,7 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 </div>
 </div>
 <div>
-<p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #CFC4EE">Idioma de las cartas</p>
+<p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #D9DEE5">Idioma de las cartas</p>
 <div style="display: flex; gap: 8px">
 <button type="button" class="pill" data-lang="es" aria-pressed="true">Español</button>
 <button type="button" class="pill" data-lang="en" aria-pressed="false">English</button>
@@ -89,7 +96,7 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 </div>
 </div>
 <button type="submit" class="btn" style="min-height: 56px; border: 0; border-radius: 999px; background: #80A3B9; color: #060101; font: inherit; font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; margin-top: 6px">Quiero el kit</button>
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #A69CC2">Sin spam. Te das de baja con un clic.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #9EA3AA">Sin spam. Te das de baja con un clic.</p>
 <input type="hidden" name="fields[intereses]" id="k-intereses">
 <input type="hidden" name="fields[idioma]" id="k-idioma">
 </form>
@@ -97,8 +104,8 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 <div id="kit-done" hidden style="text-align: center; padding: 30px 0">
 <p class="g spin" style="margin: 0 0 18px; font-size: 40px; color: #B38B59">✷</p>
 <p style="margin: 0 0 12px; font-family: 'Cormorant Garamond', serif; font-size: 38px; font-style: italic">El portal está abierto.</p>
-<p style="margin: 0 0 24px; font-size: 17px; color: #E4E0EA">Revisa tu correo: tu kit ya va en camino.</p>
-<button type="button" id="kit-back" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #E4E0EA; font: inherit; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Volver</button>
+<p style="margin: 0 0 24px; font-size: 17px; color: #E6E7E9">Revisa tu correo: tu kit ya va en camino.</p>
+<button type="button" id="kit-back" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #E6E7E9; font: inherit; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Volver</button>
 </div>
 </div>
 </div>
@@ -107,28 +114,28 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 <section style="max-width: 1280px; margin: 0 auto; padding: 120px 5% 100px; box-sizing: border-box">
 <h2 style="margin: 0 0 56px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 5.4vw, 72px); line-height: 1">Lo que <em style="color: #80A3B9">recibes</em></h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px">
-<div class="item" style="border: 1px solid #2A2433; border-radius: 6px; overflow: hidden; background: #0C0A14">
+<div class="item" style="border: 1px solid #2B2C30; border-radius: 6px; overflow: hidden; background: #0D0E10">
 <img src="images/f77ce3b0ca48575d56637a0fcc5d6946.jpg" alt="Árbol visto desde abajo con luz" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block">
 <div style="padding: 30px">
 <p style="margin: 0 0 10px; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.2em; color: #B38B59"><span>01</span><span class="g">꩜</span></p>
 <h3 style="margin: 0 0 10px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px">Una práctica</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B9B3C9">Una clase de yoga en video, grabada en el camino. [Duración]</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4B8BE">Una clase de yoga en video, grabada en el camino. [Duración]</p>
 </div>
 </div>
-<div class="item" style="border: 1px solid #2A2433; border-radius: 6px; overflow: hidden; background: #0C0A14">
+<div class="item" style="border: 1px solid #2B2C30; border-radius: 6px; overflow: hidden; background: #0D0E10">
 <img src="images/3232f43f638967860a5aa85766f0bb69.jpg" alt="Mano extendida sobre el agua" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block">
 <div style="padding: 30px">
 <p style="margin: 0 0 10px; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.2em; color: #B38B59"><span>02</span><span class="g">໑</span></p>
 <h3 style="margin: 0 0 10px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px">Un ritual</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B9B3C9">Una guía de escritura simbólica para volver a ti. [Formato]</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4B8BE">Una guía de escritura simbólica para volver a ti. [Formato]</p>
 </div>
 </div>
-<div class="item" style="border: 1px solid #2A2433; border-radius: 6px; overflow: hidden; background: #0C0A14">
+<div class="item" style="border: 1px solid #2B2C30; border-radius: 6px; overflow: hidden; background: #0D0E10">
 <img src="images/185cf54845b611c177fdcf45ef51d616.jpg" alt="Camino abierto bajo grandes nubes" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block">
 <div style="padding: 30px">
 <p style="margin: 0 0 10px; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.2em; color: #B38B59"><span>03</span><span class="g">𖦹</span></p>
 <h3 style="margin: 0 0 10px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px">Cartas del camino</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B9B3C9">Arte, cultura local y lo aprendido en cada lugar. [Frecuencia]</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4B8BE">Arte, cultura local y lo aprendido en cada lugar. [Frecuencia]</p>
 </div>
 </div>
 </div>
@@ -156,13 +163,13 @@ input:focus{outline:2px solid #B38B59;outline-offset:2px}
 </div>
 </div>
 
-<section style="background: #2A2140; border-top: 1px solid #3A2F57; padding: 110px 5%; text-align: center">
+<section style="background: #16171B; border-top: 1px solid #4A463F; padding: 110px 5%; text-align: center">
 <p class="g" style="margin: 0 0 24px; font-size: 22px; letter-spacing: 1.2em; color: #B38B59">๑ ✷ 𖤓 ໑ ꩜</p>
 <p style="margin: 0 auto 36px; max-width: 760px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(32px, 4vw, 54px); line-height: 1.25">¿A qué quieres darle una vida eterna?</p>
 <a href="#k-email" class="btn" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 34px; border-radius: 999px; background: #80A3B9; color: #060101; font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase">Quiero el kit</a>
 </section>
 
-<footer style="border-top: 1px solid #1E1A26; padding: 48px 5%">
+<footer style="border-top: 1px solid #1F2024; padding: 48px 5%">
 <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
 <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px">Azul Perenne</p>
 <p class="g" style="margin: 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>

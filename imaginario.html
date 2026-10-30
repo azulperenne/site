@@ -29,12 +29,19 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 .ctl{transition:background .3s,color .3s;cursor:pointer}.ctl:hover{background:#B38B59;color:#060101}
 @media (prefers-reduced-motion:reduce){.rise,.spin,.fade{animation:none}}
 #lb:not([hidden]){display:flex}
+/* tornasol · ojo de gato */
+[style*="#16171B"]{background-image:linear-gradient(105deg,transparent 30%,rgba(201,206,214,.10) 41%,rgba(214,170,120,.20) 48%,rgba(150,196,206,.12) 55%,transparent 68%),linear-gradient(160deg,#1C1D21 0%,#111215 55%,#1B1712 100%)!important;background-size:260% 100%,100% 100%!important;animation:catseye 11s ease-in-out infinite!important;border-color:#4A463F!important}
+@keyframes catseye{0%,100%{background-position:115% 0,0 0}50%{background-position:-15% 0,0 0}}
+[style*="color: #D9DEE5"]{background-image:linear-gradient(100deg,#E6E8EC 0%,#C9A27A 22%,#A9C9CF 44%,#E6E8EC 62%,#B98A5A 82%,#E6E8EC 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:tornasol 14s linear infinite}
+[style*="color: #D9DEE5"] *{-webkit-text-fill-color:currentColor}
+@keyframes tornasol{to{background-position:300% 0}}
+@media (prefers-reduced-motion:reduce){[style*="#16171B"],[style*="color: #D9DEE5"]{animation:none!important}}
 </style>
 </head>
 <body>
 <div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #060101; min-height: 100%">
 
-<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #1E1A26">
+<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #1F2024">
 <a href="/" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: #FCFBF8"><span class="g" style="color: #80A3B9; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase">
 <a href="/imaginario" style="color: #B38B59">Imaginario</a>
@@ -54,7 +61,7 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 </div>
 <div style="max-width: 400px">
 <p style="margin: 0 0 12px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 26px; line-height: 1.35; color: #CFD9E2">mis fotos son destellos.</p>
-<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; color: #B9B3C9"><span class="g" style="color: #B38B59">✶</span> ninguna fotografía ha sido interferida o editada <span class="g" style="color: #B38B59">✶</span></p>
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; color: #B4B8BE"><span class="g" style="color: #B38B59">✶</span> ninguna fotografía ha sido interferida o editada <span class="g" style="color: #B38B59">✶</span></p>
 </div>
 </section>
 
@@ -66,11 +73,11 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 </div>
 </section>
 
-<section style="background: #2A2140; border-top: 1px solid #3A2F57; padding: 80px 5%">
+<section style="background: #16171B; border-top: 1px solid #4A463F; padding: 80px 5%">
 <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px">
 <div>
 <p class="g" style="margin: 0 0 12px; color: #B38B59; font-size: 22px">𖦹</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 52px); line-height: 1.05">Postales del camino, <em style="color: #CFC4EE">en tu correo</em>.</h2>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 52px); line-height: 1.05">Postales del camino, <em style="color: #D9DEE5">en tu correo</em>.</h2>
 </div>
 <a href="/kit" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: #B38B59; color: #060101; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Recibe el Kit</a>
 </div>
@@ -80,13 +87,13 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 <img id="lb-img" src="" alt="" style="max-width: 92%; max-height: 76%; object-fit: contain; display: block; border-radius: 2px">
 <p id="lb-cap" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #CFD9E2"></p>
 <div style="display: flex; gap: 12px">
-<button type="button" class="ctl" id="lb-prev" aria-label="Anterior" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #FCFBF8; font-size: 20px">←</button>
-<button type="button" class="ctl" id="lb-close" style="height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #FCFBF8; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Cerrar</button>
-<button type="button" class="ctl" id="lb-next" aria-label="Siguiente" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #5B4E80; background: transparent; color: #FCFBF8; font-size: 20px">→</button>
+<button type="button" class="ctl" id="lb-prev" aria-label="Anterior" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font-size: 20px">←</button>
+<button type="button" class="ctl" id="lb-close" style="height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Cerrar</button>
+<button type="button" class="ctl" id="lb-next" aria-label="Siguiente" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font-size: 20px">→</button>
 </div>
 </div>
 
-<footer style="border-top: 1px solid #1E1A26; padding: 48px 5%">
+<footer style="border-top: 1px solid #1F2024; padding: 48px 5%">
 <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
 <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px">Azul Perenne</p>
 <p class="g" style="margin: 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
@@ -101,7 +108,7 @@ var f='todo',list=ALL,cur=-1;
 var chips=document.getElementById('chips'),grid=document.getElementById('grid');
 var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap');
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
-function chipStyle(on){return 'min-height: 44px; padding: 0 22px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid '+(on?'#80A3B9':'#3A2F57')+'; background: '+(on?'#80A3B9':'transparent')+'; color: '+(on?'#060101':'#E4E0EA');}
+function chipStyle(on){return 'min-height: 44px; padding: 0 22px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid '+(on?'#80A3B9':'#4A463F')+'; background: '+(on?'#80A3B9':'transparent')+'; color: '+(on?'#060101':'#E6E7E9');}
 function render(){
   list=f==='todo'?ALL:ALL.filter(function(p){return p.serie===f;});
   chips.innerHTML=['todo','agua','gente','ciudad','luz'].map(function(k){
