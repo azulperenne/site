@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Azul Perenne — Logbook</title>
+<meta content="Azul Perenne — art, local culture, yoga and analog photography." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<style>
+[hidden]{display:none!important}
+body{margin:0;background:#110E0C}
+a{color:#80A3B9;text-decoration:none}a:hover{color:#A9C2D3}
+.g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
+@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+.kb{animation:drift 26s ease-in-out infinite alternate}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(169,194,211,.7)}70%{box-shadow:0 0 0 14px rgba(169,194,211,0)}100%{box-shadow:0 0 0 0 rgba(169,194,211,0)}}
+.pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes dash{to{background-position:-40px 0}}
+.route{background-image:linear-gradient(90deg,#6B6F76 50%,transparent 50%);background-size:20px 1px;background-repeat:repeat-x;background-position:0 50%;animation:dash 2s linear infinite}
+.zoom{overflow:hidden}.zoom img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}.card:hover .zoom img{transform:scale(1.06)}
+.card h3{transition:color .4s}.card:hover h3{color:#A9C2D3}
+.play{transition:transform .5s cubic-bezier(.2,.7,.2,1),background .4s}.card:hover .play{transform:scale(1.12);background:#A9C2D3;color:#110E0C}
+.row{transition:padding .5s cubic-bezier(.2,.7,.2,1),color .4s}.row:hover{padding-left:20px;color:#A9C2D3}
+.nav a{color:#FCFBF8}.nav a:hover{color:#A9C2D3}
+@media (prefers-reduced-motion:reduce){.kb,.pulse,.rise,.route{animation:none}}
+@keyframes nadar{0%,100%{transform:rotate(var(--r)) scaleX(var(--f)) translateY(0)}50%{transform:rotate(calc(var(--r) + 4deg)) scaleX(var(--f)) translateY(-10px)}}
+.pez{display:block;animation:nadar 6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.pez{animation:none;transform:rotate(var(--r)) scaleX(var(--f))}}
+</style>
+<link href="/vintage.css" rel="stylesheet"/>
+<link href="/artesanal.css?v=10" rel="stylesheet"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+</head>
+<body>
+<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #110E0C">
+<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #1F2024">
+<a href="/en/" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: #FCFBF8"><span class="g" style="color: #80A3B9; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase">
+<a href="/en/imaginario">Imaginario</a>
+<a href="/en/bitacora" style="color: #A9C2D3">Logbook</a>
+<a href="#movimiento">Movement</a>
+<a href="#escritos">Crisalia Ediciones</a>
+<a href="/en/#sobre">About Azul</a>
+<a href="/en/kit" style="background: #A9C2D3; color: #110E0C; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.18em">The Kit</a>
+<a href="/bitacora" hreflang="es" lang="es" style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1px solid rgba(252,251,248,0.35); border-radius: 999px; font-size: 12px; letter-spacing: 0.16em">ES</a>
+</nav>
+</header>
+<section style="display: flex; flex-wrap: wrap; min-height: 640px">
+<div style="flex: 1 1 520px; padding: 100px 5% 80px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center">
+<p class="rise" style="margin: 0 0 18px; display: inline-flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.26em; text-transform: uppercase; color: #E6E7E9"><span class="pulse" style="width: 10px; height: 10px; border-radius: 999px; background: #A9C2D3; display: inline-block"></span>Now in · New York</p>
+<h1 class="rise" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(64px, 9vw, 140px); line-height: 0.9; letter-spacing: -0.02em">Logbook</h1>
+<p style="margin: 28px 0 0; max-width: 460px; font-size: 20px; line-height: 1.6; color: #E6E7E9">Art, local culture and what you learn by listening to those who inhabit each place.</p>
+</div>
+<div style="flex: 1 1 520px; min-height: 480px; position: relative; overflow: hidden">
+<img alt="Times Square at night, New York" class="kb" src="/images/2467881d4b9162ca774cf342abc6edff.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"/>
+</div>
+</section>
+<section style="border-top: 1px solid #1F2024; border-bottom: 1px solid #1F2024; padding: 44px 5%">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px">
+<p style="margin: 0; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9">The route</p>
+<div style="flex: 1 1 600px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: #A9C2D3">New York</span>
+<span aria-hidden="true" class="route" style="flex: 1 1 60px; height: 1px; min-width: 40px"></span>
+<span class="g" style="color: #80A3B9">✷</span>
+<span aria-hidden="true" class="route" style="flex: 1 1 60px; height: 1px; min-width: 40px"></span>
+<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: #E6E7E9">Colombia</span>
+<span aria-hidden="true" class="route" style="flex: 1 1 60px; height: 1px; min-width: 40px"></span>
+<span class="g" style="color: #80A3B9">✷</span>
+<span aria-hidden="true" class="route" style="flex: 1 1 60px; height: 1px; min-width: 40px"></span>
+<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: #8C8F94">Argentina</span>
+</div>
+</div>
+</section>
+<section style="max-width: 1280px; margin: 0 auto; padding: 110px 5% 60px; box-sizing: border-box; text-align: center">
+<h2 style="margin: 0 0 56px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 5.4vw, 72px); line-height: 1">From the <em style="color: #80A3B9">road</em></h2>
+<div aria-label="School of fish drawn in stippling by Camila" class="cardumen" role="img" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px 34px; margin: 0 auto 70px; max-width: 1100px">
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: -18deg; --f: 1; width: 140px; height: auto; margin-top: 0px; animation-delay: -0.0s; filter: none"/>
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: 8deg; --f: -1; width: 95px; height: auto; margin-top: 40px; animation-delay: -1.3s; filter: none"/>
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: -28deg; --f: 1; width: 120px; height: auto; margin-top: -20px; animation-delay: -2.6s; filter: none"/>
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: 14deg; --f: -1; width: 80px; height: auto; margin-top: 30px; animation-delay: -3.9s; filter: none"/>
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: -10deg; --f: 1; width: 150px; height: auto; margin-top: -10px; animation-delay: -5.2s; filter: none"/>
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: 22deg; --f: -1; width: 100px; height: auto; margin-top: 25px; animation-delay: -6.5s; filter: none"/>
+<img alt="" aria-hidden="true" class="pez" src="/images/pez-camila.webp" style="--r: -20deg; --f: 1; width: 115px; height: auto; margin-top: 0px; animation-delay: -7.8s; filter: none"/>
+</div>
+</section>
+<section id="movimiento" style="background: #101114; padding: 110px 5%; margin-top: 60px">
+<div style="max-width: 1280px; margin: 0 auto">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px">
+<div>
+<p class="g" style="margin: 0 0 12px; color: #A9C2D3; font-size: 22px">꩜</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(44px, 5.4vw, 72px); line-height: 1">Movement</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 1.6; color: #B4B8BE">The body is the path.</p>
+</div>
+<figure style="margin: 0 auto 64px; max-width: 620px">
+<img alt="Page from Camila's practice notebook: a study of Virasana, a body seated on a block surrounded by handwritten notes about the pelvis, the spine and the blocks" loading="lazy" src="/images/virasana-camila.webp" style="width: 100%; height: auto; display: block; filter: none"/>
+<figcaption style="margin: 16px 0 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #B4B8BE">Virasana — from my practice notebook.</figcaption>
+</figure>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
+<a class="card" href="#" style="display: block; color: #FCFBF8">
+<div class="zoom" style="position: relative; aspect-ratio: 16 / 10; border-radius: 4px"><img alt="Person sitting facing the sea" src="/images/8eafd7e89e410a47218bb43c02e2b45a.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block"/><span aria-hidden="true" class="play" style="position: absolute; left: 20px; bottom: 20px; width: 56px; height: 56px; border-radius: 999px; background: rgba(252,251,248,0.92); color: #110E0C; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M7 4l13 8-13 8z"></path></svg></span><span style="position: absolute; right: 16px; bottom: 20px; font-size: 13px; letter-spacing: 0.1em; color: #FCFBF8">[MM:SS]</span></div>
+<h3 style="margin: 20px 0 6px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px">Greeting the place</h3>
+<p style="margin: 0; font-size: 15px; color: #B4B8BE">Dawn practice · [Place]</p>
+</a>
+<a class="card" href="#" style="display: block; color: #FCFBF8">
+<div class="zoom" style="position: relative; aspect-ratio: 16 / 10; border-radius: 4px"><img alt="Tree trunk seen from below" src="/images/f77ce3b0ca48575d56637a0fcc5d6946.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block"/><span aria-hidden="true" class="play" style="position: absolute; left: 20px; bottom: 20px; width: 56px; height: 56px; border-radius: 999px; background: rgba(252,251,248,0.92); color: #110E0C; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M7 4l13 8-13 8z"></path></svg></span><span style="position: absolute; right: 16px; bottom: 20px; font-size: 13px; letter-spacing: 0.1em; color: #FCFBF8">[MM:SS]</span></div>
+<h3 style="margin: 20px 0 6px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px">Root</h3>
+<p style="margin: 0; font-size: 15px; color: #B4B8BE">Grounding sequence · [Place]</p>
+</a>
+<a class="card" href="#" style="display: block; color: #FCFBF8">
+<div class="zoom" style="position: relative; aspect-ratio: 16 / 10; border-radius: 4px"><img alt="Lake between autumn hills" src="/images/cf792270fd17def37c9e8ac3504e8ac2.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block"/><span aria-hidden="true" class="play" style="position: absolute; left: 20px; bottom: 20px; width: 56px; height: 56px; border-radius: 999px; background: rgba(252,251,248,0.92); color: #110E0C; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M7 4l13 8-13 8z"></path></svg></span><span style="position: absolute; right: 16px; bottom: 20px; font-size: 13px; letter-spacing: 0.1em; color: #FCFBF8">[MM:SS]</span></div>
+<h3 style="margin: 20px 0 6px; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px">Breathing the water</h3>
+<p style="margin: 0; font-size: 15px; color: #B4B8BE">Restorative practice · [Place]</p>
+</a>
+</div>
+</div>
+</section>
+<section id="escritos" style="max-width: 1240px; margin: 0 auto; padding: 120px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<figure style="flex: 1 1 320px; max-width: 440px; margin: 0; position: sticky; top: 40px">
+<img alt="Ink drawing by Camila: a woman with long black hair streaked with white lines, looking sideways, holding a cigarette" loading="lazy" src="/images/pelo-largo-camila.webp" style="width: 100%; height: auto; display: block; border-radius: 2px; filter: none"/>
+</figure>
+<div style="flex: 1 1 480px">
+<p class="g" style="margin: 0 0 12px; color: #A9C2D3; font-size: 22px">໑</p>
+<h2 style="margin: 0 0 12px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(44px, 5.4vw, 72px); line-height: 1">Crisalia Ediciones</h2>
+<p style="margin: 0 0 48px; font-size: 17px; color: #B4B8BE">Symbolic language, for those who read between the lines.</p>
+<div style="border-top: 1px solid #2B2C30">
+<a class="row" href="/en/escritos/el-sol-tambien-llora" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">the sun also cries</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">October 28, 2026</span>
+</a>
+<a class="row" href="/en/escritos/mi-amor" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">my love</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">October 28, 2026</span>
+</a>
+<a class="row" href="/en/escritos/aullidos-matutinos" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">morning howls</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">October 28, 2026</span>
+</a>
+<a class="row" href="/en/escritos/cortando-las-flores-crecen-las-raices" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">cutting the flowers, the roots grow</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">September 11, 2026</span>
+</a>
+<a class="row" href="/en/escritos/why-am-i-here" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">✼ why am i here?✼</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">December 3, 2025</span>
+</a>
+<a class="row" href="/en/escritos/iluminada" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">Illuminated 𖤓</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">October 22, 2025</span>
+</a>
+<a class="row" href="/en/escritos/trascender" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 30px 0; border-bottom: 1px solid #2B2C30; color: #FCFBF8">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400">To transcend…</span>
+<span style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #80A3B9">October 15, 2025</span>
+</a>
+</div>
+</div>
+</section>
+<section style="background: #16171B; border-top: 1px solid #3A3F47; padding: 80px 5%">
+<div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px">
+<div>
+<p class="g" style="margin: 0 0 12px; color: #A9C2D3; font-size: 22px">𖦹</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 52px); line-height: 1.05">Every new story, <em style="color: #D9DEE5">first in your inbox</em>.</h2>
+</div>
+<a href="/en/kit" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: #80A3B9; color: #110E0C; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Get the Kit</a>
+</div>
+</section>
+<footer style="border-top: 1px solid #1F2024; padding: 48px 5%">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px">Azul Perenne</p>
+<p class="g" style="margin: 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

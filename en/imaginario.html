@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Azul Perenne — Imaginario</title>
+<meta content="Azul Perenne — art, local culture, yoga and analog photography." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<style>
+[hidden]{display:none!important}
+body{margin:0;background:#110E0C}
+a{color:#80A3B9;text-decoration:none}a:hover{color:#A9C2D3}
+.g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin 28s linear infinite;display:inline-block}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.fade{animation:fade .5s ease both}
+.tile{position:relative;display:block;width:100%;margin:0 0 18px;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;overflow:hidden;border-radius:3px}
+.tile img{display:block;width:100%;height:auto;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .8s}
+.tile:hover img{transform:scale(1.05);filter:saturate(1.15)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;text-align:left;font:italic 300 18px 'Cormorant Garamond',serif;color:#FCFBF8;background:linear-gradient(180deg,transparent,rgba(6,1,1,.75));opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.tile:hover .cap,.tile:focus-visible .cap{opacity:1;transform:none}
+.chip{transition:background .35s,color .35s,border-color .35s;cursor:pointer}
+.chip:hover{border-color:#80A3B9}
+.nav a{color:#FCFBF8}.nav a:hover{color:#A9C2D3}
+.ctl{transition:background .3s,color .3s;cursor:pointer}.ctl:hover{background:#A9C2D3;color:#110E0C}
+@media (prefers-reduced-motion:reduce){.rise,.spin,.fade{animation:none}}
+#lb:not([hidden]){display:flex}
+</style>
+<link href="/artesanal.css?v=10" rel="stylesheet"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+</head>
+<body>
+<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #110E0C; min-height: 100%">
+<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #1F2024">
+<a href="/en/" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: #FCFBF8"><span class="g" style="color: #80A3B9; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase">
+<a href="/en/imaginario" style="color: #A9C2D3">Imaginario</a>
+<a href="/en/bitacora">Logbook</a>
+<a href="/en/bitacora#movimiento">Movement</a>
+<a href="/en/bitacora#escritos">Crisalia Ediciones</a>
+<a href="/en/#sobre">About Azul</a>
+<a href="/en/kit" style="background: #A9C2D3; color: #110E0C; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.18em">The Kit</a>
+<a href="/imaginario" hreflang="es" lang="es" style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1px solid rgba(252,251,248,0.35); border-radius: 999px; font-size: 12px; letter-spacing: 0.16em">ES</a>
+</nav>
+</header>
+<section style="max-width: 1280px; margin: 0 auto; padding: 110px 5% 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div class="rise">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9"><span class="g spin" style="color: #A9C2D3; margin-right: 12px">✷</span>Portfolio · analog photography</p>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(64px, 10vw, 150px); line-height: 0.9; letter-spacing: -0.02em">Imaginario</h1>
+</div>
+<div style="max-width: 400px">
+<p style="margin: 0 0 12px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 26px; line-height: 1.35; color: #CFD9E2">my photos are flashes.</p>
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; color: #B4B8BE"><span class="g" style="color: #A9C2D3">✶</span> no photograph has been altered or edited <span class="g" style="color: #A9C2D3">✶</span></p>
+</div>
+</section>
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 5% 120px; box-sizing: border-box">
+<div id="grid" style="column-width: 340px; column-gap: 18px">
+</div>
+</section>
+<section style="background: #16171B; border-top: 1px solid #3A3F47; padding: 80px 5%">
+<div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px">
+<div>
+<p class="g" style="margin: 0 0 12px; color: #A9C2D3; font-size: 22px">𖦹</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 52px); line-height: 1.05">Postcards from the road, <em style="color: #D9DEE5">in your inbox</em>.</h2>
+</div>
+<a href="/en/kit" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: #A9C2D3; color: #110E0C; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Get the Kit</a>
+</div>
+</section>
+<div aria-label="Enlarged photograph" aria-modal="true" class="fade" hidden="" id="lb" role="dialog" style="position: fixed; inset: 0; z-index: 50; background: rgba(6,1,1,0.94); flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 32px; box-sizing: border-box">
+<img alt="" id="lb-img" src="" style="max-width: 92%; max-height: 76%; object-fit: contain; display: block; border-radius: 2px"/>
+<p hidden="" id="lb-cap"></p>
+<div style="display: flex; gap: 12px">
+<button aria-label="Previous" class="ctl" id="lb-prev" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font-size: 20px" type="button">←</button>
+<button class="ctl" id="lb-close" style="height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font: inherit; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase" type="button">Close</button>
+<button aria-label="Next" class="ctl" id="lb-next" style="width: 52px; height: 52px; border-radius: 999px; border: 1px solid #6B6F76; background: transparent; color: #FCFBF8; font-size: 20px" type="button">→</button>
+</div>
+</div>
+<footer style="border-top: 1px solid #1F2024; padding: 48px 5%">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px">Azul Perenne</p>
+<p class="g" style="margin: 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+var S={agua:'Agua',gente:'Gente',ciudad:'Ciudad',luz:'Luz y flora'};
+var ALL=[{"id": "24c08fc32356db81a3bb705ec5def398", "s": "agua", "a": "Sunset at sea"}, {"id": "9621cdc63cec7be316b312fc3c792b3d", "s": "luz", "a": "Flowers at night"}, {"id": "1a9242b3773b70741a5fe278abfce49f", "s": "gente", "a": "Violet scarf, autumn"}, {"id": "0eb59c3be350e980585991aa8bb04dfa", "s": "ciudad", "a": "Ferris wheel by the sea"}, {"id": "5c2dcdd2e011994f7a6b0c83c8da0c17", "s": "agua", "a": "The sky in the water"}, {"id": "d07fb9e91faebab675468ed64331ba68", "s": "luz", "a": "Yellow flowers"}, {"id": "1703abbbded9f3905bc0306c14c9c39c", "s": "gente", "a": "Ice cream in the street"}, {"id": "960995ba0f0ce2c47f28d92c67590ccd", "s": "agua", "a": "River of lights"}, {"id": "e98cca400aaf95506cdb0e4c5c2150d5", "s": "gente", "a": "Silhouettes at sunset"}, {"id": "57bc7ee7827e379afe44e9a8034fd097", "s": "ciudad", "a": "City and reflection"}, {"id": "3232f43f638967860a5aa85766f0bb69", "s": "agua", "a": "Hand over the stream"}, {"id": "c6c7de89a9490767bb07ad3c5621550a", "s": "luz", "a": "Double palm tree"}, {"id": "86c4e6e129026cbc321c6474cc4031d6", "s": "gente", "a": "Below the stage"}, {"id": "dd6c2a5a1617db6bb08cc2f6e74fc9fa", "s": "agua", "a": "Lake on fire"}, {"id": "3d7503a0e2419f7283994f81660025a1", "s": "ciudad", "a": "Flash in the street"}, {"id": "f77ce3b0ca48575d56637a0fcc5d6946", "s": "luz", "a": "Looking up"}, {"id": "8a48e0a3034b48185beefeb032d5e12a", "s": "agua", "a": "Wave at nightfall"}, {"id": "2467881d4b9162ca774cf342abc6edff", "s": "gente", "a": "Night in the city"}, {"id": "213b7374467d720cc1cbd5e84a139419", "s": "ciudad", "a": "Balcony and palm trees"}, {"id": "bbb64a9753d0fed552b69821416fab7b", "s": "luz", "a": "Window in half-light"}, {"id": "cf792270fd17def37c9e8ac3504e8ac2", "s": "agua", "a": "Lake between hills"}, {"id": "be0e5c5ba44e73c5cc0343d9f20f7133", "s": "gente", "a": "The red crowd"}, {"id": "60710c8d6f2bdf6d431ed358306fec07", "s": "ciudad", "a": "Bicycle and clouds"}, {"id": "4bbc4fcad16f00e18f91e5de802270ba", "s": "luz", "a": "Plant in the window"}, {"id": "8eafd7e89e410a47218bb43c02e2b45a", "s": "agua", "a": "Sitting facing the sea"}, {"id": "c348f2757ddb5eebf00b2f2f951ad98c", "s": "gente", "a": "Friends"}, {"id": "df7843fcd9b96d476e8c19498035d16d", "s": "ciudad", "a": "Winter branches"}, {"id": "d6dfceb8c47cb1eb02e4fbb4637746e0", "s": "luz", "a": "Window light"}, {"id": "9ac295383b1c945b8b4a0aa3565e9cd4", "s": "agua", "a": "Umbrellas and flash"}, {"id": "185cf54845b611c177fdcf45ef51d616", "s": "ciudad", "a": "Road of clouds"}, {"id": "8a3ea8b8a2c9f795ba3badd70ccff9ec", "s": "luz", "a": "Painting on the wall"}, {"id": "2a97d10fad0ef116995cae708e5e4aeb", "s": "agua", "a": "Cloudy beach"}, {"id": "9480f061a54bc4dab3029e446a655bb3", "s": "agua", "a": "Green river"}].map(function(p){return {src:'/images/'+p.id+'.jpg',serie:p.s,serieName:S[p.s],alt:p.a};});
+var f='todo',list=ALL,cur=-1;
+var grid=document.getElementById('grid');
+var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap');
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+function chipStyle(on){return 'min-height: 44px; padding: 0 22px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid '+(on?'#80A3B9':'#3A3F47')+'; background: '+(on?'#80A3B9':'transparent')+'; color: '+(on?'#110E0C':'#E6E7E9');}
+function render(){
+  list=f==='todo'?ALL:ALL.filter(function(p){return p.serie===f;});
+  grid.innerHTML=list.map(function(p,i){
+    return '<button type="button" class="tile fade" data-i="'+i+'" aria-label="Ampliar: '+esc(p.alt)+'"><img src="'+p.src+'" alt="'+esc(p.alt)+'" loading="lazy"></button>';
+  }).join('');
+}
+function open(i){cur=(i+list.length)%list.length;var p=list[cur];li.src=p.src;li.alt=p.alt;lc.textContent='';lb.hidden=false;document.getElementById('lb-close').focus();}
+function close(){lb.hidden=true;cur=-1;}
+grid.addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(b)open(+b.getAttribute('data-i'));});
+document.getElementById('lb-prev').onclick=function(){open(cur-1);};
+document.getElementById('lb-next').onclick=function(){open(cur+1);};
+document.getElementById('lb-close').onclick=close;
+lb.addEventListener('click',function(e){if(e.target===lb)close();});
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')open(cur-1);if(e.key==='ArrowRight')open(cur+1);});
+render();
+})();
+</script>
+</body>
+</html>
