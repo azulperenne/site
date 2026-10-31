@@ -41,6 +41,7 @@ for p in pages:
     out=re.sub(r'"a": "([^"]+)"',lambda m:'"a": "'+T.get(m.group(1),m.group(1)).replace('"','\\"')+'"',out)
     out=out.replace('src="images/','src="/images/').replace("'images/","'/images/").replace('"images/','"/images/')
     out=out.replace("location.href='/kit'","location.href='/en/kit'")
+    out=out.replace('¡<em','<em')
     out=add_switch(out,u,'ES','es')
     out=out.replace('<link rel="icon"',f'<link rel="alternate" hreflang="es" href="{u}">\n<link rel="icon"',1)
     dest='en/index.html' if p=='index.html' else 'en/'+p
