@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet">
 <style>
 [hidden]{display:none!important}
-body{margin:0;background:#060101}
-a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
+body{margin:0;background:#110E0C}
+a{color:#C0773F;text-decoration:none}a:hover{color:#B38B59}
 .g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
 @keyframes drift{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
 .kb{animation:drift 24s ease-in-out infinite alternate}
@@ -28,8 +28,8 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 .rise3{animation:rise 1.6s .7s cubic-bezier(.2,.7,.2,1) both}
 .zoom{overflow:hidden}.zoom img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}.zoom:hover img{transform:scale(1.07)}
 .btn{transition:background .4s,color .4s,border-color .4s}
-.btn-b:hover{background:#FCFBF8;color:#060101}
-.btn-o:hover{border-color:#80A3B9;color:#80A3B9}
+.btn-b:hover{background:#FCFBF8;color:#110E0C}
+.btn-o:hover{border-color:#C0773F;color:#C0773F}
 .nav a{color:#FCFBF8}.nav a:hover{color:#B38B59}
 @media (prefers-reduced-motion:reduce){.kb,.marq,.strip,.spin,.float,.rise,.rise2,.rise3{animation:none}}
 @keyframes reveal{0%,18%{filter:brightness(.06) saturate(.6)}20%{filter:brightness(1.7) saturate(1.3)}21%{filter:brightness(.2)}22.5%{filter:brightness(1.35) saturate(1.2)}27%{filter:brightness(1) saturate(1.05)}72%{filter:brightness(.9) saturate(1)}93%,100%{filter:brightness(.06) saturate(.6)}}
@@ -40,49 +40,43 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 .bolt path{stroke-dasharray:900;animation:bolt 9s linear infinite}
 .b2 path{animation-duration:11s;animation-delay:2.3s}
 .list li{position:relative;padding-left:30px;margin:0 0 14px}
-.list li::before{content:'๑';position:absolute;left:0;color:#80A3B9;font-style:normal;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
+.list li::before{content:'๑';position:absolute;left:0;color:#C0773F;font-style:normal;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
 @media (prefers-reduced-motion:reduce){.storm,.flash,.bolt path{animation:none}.storm{filter:brightness(.85)}}
-.mystic{background-color:#08090B;background-image:radial-gradient(1px 1px at 12% 30%,rgba(232,217,181,.7) 50%,transparent 51%),radial-gradient(1px 1px at 37% 72%,rgba(217,222,229,.6) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 63% 22%,rgba(232,217,181,.55) 50%,transparent 51%),radial-gradient(1px 1px at 86% 64%,rgba(128,163,185,.7) 50%,transparent 51%),radial-gradient(1px 1px at 52% 48%,rgba(255,255,255,.35) 50%,transparent 51%);background-size:260px 120px}
+.mystic{background-color:#110E0C;background-image:radial-gradient(1px 1px at 12% 30%,rgba(232,217,181,.7) 50%,transparent 51%),radial-gradient(1px 1px at 37% 72%,rgba(217,222,229,.6) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 63% 22%,rgba(232,217,181,.55) 50%,transparent 51%),radial-gradient(1px 1px at 86% 64%,rgba(192,119,63,.7) 50%,transparent 51%),radial-gradient(1px 1px at 52% 48%,rgba(255,255,255,.35) 50%,transparent 51%);background-size:260px 120px}
 .mline{position:absolute;left:0;right:0;top:12px;height:5px;border-top:1px solid rgba(179,139,89,.55);border-bottom:1px solid rgba(179,139,89,.25)}
 .mline-b{top:auto;bottom:12px}
 .mt{font-family:'Cinzel',serif;font-weight:400;font-size:21px;letter-spacing:.42em;text-transform:uppercase;color:#E8D9B5;text-shadow:0 0 14px rgba(217,222,229,.55),0 0 2px rgba(232,217,181,.6)}
-.mg{font-size:26px;color:#80A3B9;text-shadow:0 0 12px rgba(128,163,185,.9);display:inline-block;animation:pulse 4s ease-in-out infinite}
+.mg{font-size:26px;color:#C0773F;text-shadow:0 0 12px rgba(192,119,63,.9);display:inline-block;animation:pulse 4s ease-in-out infinite}
 .mg:nth-of-type(3n){color:#D9DEE5;text-shadow:0 0 12px rgba(217,222,229,.9);animation-delay:1.3s}
 .mg:nth-of-type(3n+1){color:#B38B59;text-shadow:0 0 12px rgba(179,139,89,.9);animation-delay:2.6s}
 @keyframes pulse{0%,100%{opacity:.55;transform:scale(.9) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
 @media (max-width:600px){.mt{font-size:16px;letter-spacing:.32em}}
 @media (prefers-reduced-motion:reduce){.mg{animation:none}}
-/* tornasol · ojo de gato */
-[style*="#16171B"]{background-image:linear-gradient(105deg,transparent 30%,rgba(201,206,214,.10) 41%,rgba(214,170,120,.20) 48%,rgba(150,196,206,.12) 55%,transparent 68%),linear-gradient(160deg,#1C1D21 0%,#111215 55%,#1B1712 100%)!important;background-size:260% 100%,100% 100%!important;animation:catseye 11s ease-in-out infinite!important;border-color:#4A463F!important}
-@keyframes catseye{0%,100%{background-position:115% 0,0 0}50%{background-position:-15% 0,0 0}}
-[style*="color: #D9DEE5"]{background-image:linear-gradient(100deg,#E6E8EC 0%,#C9A27A 22%,#A9C9CF 44%,#E6E8EC 62%,#B98A5A 82%,#E6E8EC 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:tornasol 14s linear infinite}
-[style*="color: #D9DEE5"] *{-webkit-text-fill-color:currentColor}
-@keyframes tornasol{to{background-position:300% 0}}
-@media (prefers-reduced-motion:reduce){[style*="#16171B"],[style*="color: #D9DEE5"]{animation:none!important}}
 </style>
 <link rel="stylesheet" href="/vintage.css">
 <link rel="stylesheet" href="/punk.css">
+<link rel="stylesheet" href="/artesanal.css">
 </head>
 <body>
-<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #060101; overflow: hidden">
+<div style="font-family: 'Newsreader', serif; color: #FCFBF8; background: #110E0C; overflow: hidden">
 
-<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #1F2024">
-<a href="/" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: #FCFBF8"><span class="g" style="color: #80A3B9; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
+<header class="nav" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 28px 5%; border-bottom: 1px solid #2A221A">
+<a href="/" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: #FCFBF8"><span class="g" style="color: #C0773F; font-style: normal; font-size: 22px">๑</span>Azul Perenne</a>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase">
 <a href="/imaginario">Imaginario</a>
 <a href="/bitacora">Bitácora</a>
 <a href="/bitacora#movimiento">Movimiento</a>
 <a href="/bitacora#escritos">Escritos</a>
 <a href="/#sobre">Sobre Azul</a>
-<span style="color: #80A3B9; letter-spacing: 0.14em">ES <span style="opacity: 0.5">/</span> EN</span>
-<a href="/kit" class="btn btn-b" style="background: #80A3B9; color: #060101; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.18em">El Kit</a>
+<span style="color: #C0773F; letter-spacing: 0.14em">ES <span style="opacity: 0.5">/</span> EN</span>
+<a href="/kit" class="btn btn-b" style="background: #C0773F; color: #110E0C; padding: 12px 20px; border-radius: 999px; letter-spacing: 0.18em">El Kit</a>
 </nav>
 </header>
 
 <section style="max-width: 1180px; margin: 0 auto; padding: 110px 5% 120px; box-sizing: border-box">
-<p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #80A3B9">Si no entiendes lo que digo…</p>
+<p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #C0773F">Si no entiendes lo que digo…</p>
 <h2 style="margin: 0 0 22px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(48px, 7vw, 96px); line-height: 1; letter-spacing: -0.01em">¡<em style="color: #D9DEE5">Enhorabuena</em>!</h2>
-<p style="margin: 0 0 64px; max-width: 620px; font-size: 20px; line-height: 1.65; color: #E6E7E9">Siéntete en casa y detente aquí si esto resuena contigo y eres:</p>
+<p style="margin: 0 0 64px; max-width: 620px; font-size: 20px; line-height: 1.65; color: #EADFCB">Siéntete en casa y detente aquí si esto resuena contigo y eres:</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px 72px">
 <ul class="list" style="margin: 0; padding: 0; list-style: none; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.25">
 <li>lector entrelíneas</li>
@@ -92,7 +86,7 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 </ul>
 <div>
 <p style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #D9DEE5">Y también si:</p>
-<ul class="list" style="margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; color: #B4B8BE">
+<ul class="list" style="margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; color: #B9AC98">
 <li>le temes a la oscuridad, no te gusta el dolor, pero son tus grandes compañeros</li>
 <li>no sabes quién eres y quieres entender por qué no saber puede ser tu mejor talento</li>
 <li>te sientes desconectado y solo quieres divertirte</li>
@@ -104,51 +98,51 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#B38B59}
 </div>
 <blockquote style="margin: 110px 0 0; padding: 0; text-align: center">
 <p style="margin: 0 auto; max-width: 880px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(30px, 3.8vw, 50px); line-height: 1.25; color: #D9DEE5">❝Bienaventurados los pobres de espíritu porque de ellos es el Reino de los Cielos❞</p>
-<p style="margin: 28px auto 0; max-width: 620px; font-size: 18px; line-height: 1.65; color: #B4B8BE">…no se trata de creer, sino de explorar juntos el sentido espiritual que late en cada tradición.</p>
+<p style="margin: 28px auto 0; max-width: 620px; font-size: 18px; line-height: 1.65; color: #B9AC98">…no se trata de creer, sino de explorar juntos el sentido espiritual que late en cada tradición.</p>
 </blockquote>
-<p style="margin: 64px auto 0; max-width: 760px; text-align: center; font-size: 13px; line-height: 1.9; letter-spacing: 0.24em; text-transform: uppercase; color: #80A3B9">Recuerda: tú, allá afuera, en la gran naturaleza, ni siquiera tienes un nombre <span class="g" style="color: #B38B59; letter-spacing: 0">𖤓</span></p>
+<p style="margin: 64px auto 0; max-width: 760px; text-align: center; font-size: 13px; line-height: 1.9; letter-spacing: 0.24em; text-transform: uppercase; color: #C0773F">Recuerda: tú, allá afuera, en la gran naturaleza, ni siquiera tienes un nombre <span class="g" style="color: #B38B59; letter-spacing: 0">𖤓</span></p>
 </section>
 
-<section style="position: relative; background: #0D0E10; padding: 140px 5%; text-align: center; overflow: hidden">
+<section style="position: relative; background: #16120E; padding: 140px 5%; text-align: center; overflow: hidden">
 <img class="float" src="images/2f8a09f2d877633b68d1960b24472a33.jpg" alt="Mariposa azul sobre fondo negro" style="width: 220px; height: auto; display: block; margin: 0 auto 40px; mix-blend-mode: lighten">
-<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #CFD9E2">azul es noche, es mar, es cielo…</p>
-<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #CFD9E2">es brisa, es agua, es lágrima, es hielo…</p>
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #E8D9BF">azul es noche, es mar, es cielo…</p>
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #E8D9BF">es brisa, es agua, es lágrima, es hielo…</p>
 <p style="margin: 28px auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #D9DEE5">cuando caigo en mi raíz, realmente no estoy cayendo…</p>
 <p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #D9DEE5">pues azul es lago, es eterno, es sereno…</p>
-<p style="margin: 28px auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #80A3B9">y cuando muero, realmente no estoy muriendo…</p>
-<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #80A3B9">azul es constancia, es memoria, es silencio…</p>
+<p style="margin: 28px auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #C0773F">y cuando muero, realmente no estoy muriendo…</p>
+<p style="margin: 0 auto 0; max-width: 820px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.4; color: #C0773F">azul es constancia, es memoria, es silencio…</p>
 <p class="g" style="margin: 40px 0 0; font-size: 22px; letter-spacing: 1.2em; color: #B38B59">๑ ✷ 𖤓 ໑ ꩜</p>
 </section>
 
 <section style="max-width: 900px; margin: 0 auto; padding: 140px 5% 120px; box-sizing: border-box">
 <p class="g" style="margin: 0 0 18px; font-size: 22px; color: #B38B59">໑</p>
-<h2 style="margin: 0 0 36px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02">Para los devotos de la calma <em style="color: #80A3B9">y la profundidad…</em></h2>
-<p style="margin: 0 0 36px; font-size: 20px; line-height: 1.8; color: #E6E7E9">Sumérgete en las tinieblas, permite al agua entrar en tu cuerpo y sentir la barrera del mar de vidrio en tus manos cuando quieres salir a respirar. Atraviesa el dolor, recuerda que fue una promesa volver a esta vida sabiendo que volverás a morir, pero no todo lo que fue tuyo se irá contigo;</p>
+<h2 style="margin: 0 0 36px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02">Para los devotos de la calma <em style="color: #C0773F">y la profundidad…</em></h2>
+<p style="margin: 0 0 36px; font-size: 20px; line-height: 1.8; color: #EADFCB">Sumérgete en las tinieblas, permite al agua entrar en tu cuerpo y sentir la barrera del mar de vidrio en tus manos cuando quieres salir a respirar. Atraviesa el dolor, recuerda que fue una promesa volver a esta vida sabiendo que volverás a morir, pero no todo lo que fue tuyo se irá contigo;</p>
 <p style="margin: 0 0 26px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: #D9DEE5">dime… humana:</p>
 <p style="margin: 0 0 18px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.25">¿A qué quieres darle una vida eterna en esta vida antes de dormir eternamente?</p>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.25; color: #80A3B9">¿Eres realmente capaz de compartir tu perennidad con aquello que no se va contigo?</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.25; color: #C0773F">¿Eres realmente capaz de compartir tu perennidad con aquello que no se va contigo?</p>
 <p class="g" style="margin: 36px 0 0; font-size: 22px; color: #B38B59">꩜</p>
 </section>
 
 <section style="padding: 40px 5% 140px; text-align: center">
-<a href="/kit" class="btn btn-b" style="display: inline-block; background: #80A3B9; color: #060101; padding: 16px 28px; border-radius: 999px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Recibe el Kit</a>
+<a href="/kit" class="btn btn-b" style="display: inline-block; background: #C0773F; color: #110E0C; padding: 16px 28px; border-radius: 999px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Recibe el Kit</a>
 </section>
 
-<footer style="border-top: 1px solid #1F2024; padding: 64px 5% 48px">
+<footer style="border-top: 1px solid #2A221A; padding: 64px 5% 48px">
 <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
 <div>
 <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px">Azul Perenne</p>
-<p class="g" style="margin: 10px 0 0; color: #80A3B9; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
+<p class="g" style="margin: 10px 0 0; color: #C0773F; letter-spacing: 0.6em">๑ ✷ 𖤓</p>
 </div>
 <nav class="nav" style="display: flex; flex-wrap: wrap; gap: 14px 32px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">
 <a href="/imaginario">Imaginario</a>
 <a href="/bitacora">Bitácora</a>
 <a href="/kit">El Kit</a>
 <a href="/#sobre">Sobre Azul</a>
-<span style="color: #80A3B9">Instagram [@USUARIO]</span>
+<span style="color: #C0773F">Instagram [@USUARIO]</span>
 </nav>
 </div>
-<p style="max-width: 1280px; margin: 48px auto 0; font-size: 12px; letter-spacing: 0.12em; color: #8C8F94">© 2026 Azul Perenne · ES / EN</p>
+<p style="max-width: 1280px; margin: 48px auto 0; font-size: 12px; letter-spacing: 0.12em; color: #958870">© 2026 Azul Perenne · ES / EN</p>
 </footer>
 
 </div>
