@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Azul Perenne</title>
+<meta name="description" content="Azul Perenne — un refugio creativo para quienes buscan sentido en lo invisible y lo visible.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Rock+Salt&amp;family=Special+Elite&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;display=swap" rel="stylesheet">
+<style>
+:root{--ink:#050307;--mag:#FF2E93;--acid:#C6FF3D;--cy:#47F0FF;--sil:#D8DCE2;--pale:#F6F2F7;--mute:#A9A3AE}
+body{margin:0;background:var(--ink);color:var(--pale)}
+a{color:var(--cy);text-decoration:none}a:hover{color:var(--acid)}
+.g{font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif}
+.big{font-family:'Bowlby One SC',Impact,sans-serif;font-weight:400;letter-spacing:-.01em;text-transform:uppercase}
+.scrawl{font-family:'Rock Salt',cursive;font-weight:400;text-transform:none}
+.zine{font-family:'Special Elite','Courier New',monospace;letter-spacing:.14em;text-transform:uppercase}
+.chroma{text-shadow:-4px 0 var(--mag),4px 0 var(--cy)}
+@keyframes jitter{0%,92%,100%{transform:none;text-shadow:-4px 0 var(--mag),4px 0 var(--cy)}93%{transform:translate(-5px,2px) skewX(-6deg);text-shadow:-10px 0 var(--mag),8px 0 var(--acid)}95%{transform:translate(4px,-2px);text-shadow:8px 0 var(--mag),-8px 0 var(--cy)}97%{transform:none}}
+.jit{animation:jitter 6s steps(1,end) infinite}
+/* relámpago */
+@keyframes reveal{0%,18%{filter:brightness(.05) saturate(.6)}20%{filter:brightness(1.8) saturate(1.4)}21%{filter:brightness(.15)}22.5%{filter:brightness(1.4) saturate(1.3)}27%{filter:brightness(1) saturate(1.15)}72%{filter:brightness(.85) saturate(1.1)}93%,100%{filter:brightness(.05) saturate(.6)}}
+.storm{animation:reveal 9s linear infinite}
+@keyframes strike{0%,19.9%,100%{opacity:0}20%{opacity:.8}21%{opacity:0}22.5%{opacity:.5}24%{opacity:0}}
+.flash{animation:strike 9s linear infinite}
+@keyframes bolt{0%,19.9%,100%{opacity:0;stroke-dashoffset:900}20%{opacity:1;stroke-dashoffset:0}21%{opacity:.2}22.5%{opacity:1}25%{opacity:0;stroke-dashoffset:0}}
+.bolt path{stroke-dasharray:900;animation:bolt 9s linear infinite}
+.b2 path{animation-duration:11s;animation-delay:2.3s}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;font-family:'Special Elite',monospace;font-size:14px;letter-spacing:.16em;text-transform:uppercase;border:2px solid var(--pale);transition:transform .3s cubic-bezier(.2,.9,.2,1.5),background .2s,color .2s;cursor:pointer}
+.btn:hover{transform:rotate(-3deg) scale(1.05)}
+.btn-m{background:var(--mag);border-color:var(--mag);color:#050307}.btn-m:hover{background:var(--acid);border-color:var(--acid);color:#050307}
+.btn-o{background:transparent;color:var(--pale)}.btn-o:hover{background:var(--pale);color:#050307}
+.nav a{color:var(--pale)}.nav a:hover{color:var(--mag)}
+.card{display:block;color:var(--pale);border:2px solid #2A2530;transition:transform .5s cubic-bezier(.2,.9,.2,1.4),border-color .3s}
+.card:nth-child(1){transform:rotate(-2deg)}.card:nth-child(2){transform:rotate(1.5deg) translateY(24px)}.card:nth-child(3){transform:rotate(-1deg)}
+.card:hover{transform:rotate(0) scale(1.03);border-color:var(--mag)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:grayscale(1) contrast(1.25);transition:filter .5s}
+.card:hover img{filter:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+.strip{animation:marq 70s linear infinite}.strip:hover{animation-play-state:paused}
+.tape{position:absolute;width:110px;height:30px;background:rgba(198,255,61,.75);mix-blend-mode:screen}
+input::placeholder{color:#8E8796}
+input:focus,a:focus-visible,button:focus-visible{outline:2px solid var(--acid);outline-offset:3px}
+@media (max-width:700px){.card:nth-child(n){transform:none}}
+@media (prefers-reduced-motion:reduce){.storm,.flash,.bolt path,.jit,.strip{animation:none}.storm{filter:brightness(.7)}}
+</style>
+</head>
+<body>
+<div style="font-family: 'Newsreader', serif; overflow: hidden">
+
+<header class="nav" style="position: absolute; top: 0; left: 0; right: 0; z-index: 30; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; padding: 24px 4%">
+<a href="/nina" class="big" style="font-size: 22px; color: var(--pale)"><span class="g" style="color: var(--mag)">ϟ</span> Azul Perenne</a>
+<nav class="zine" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; font-size: 13px">
+<a href="/imaginario">Imaginario</a>
+<a href="/bitacora">Bitácora</a>
+<a href="/bitacora#movimiento">Movimiento</a>
+<a href="/bitacora#escritos">Escritos</a>
+<a href="#sobre">Sobre Azul</a>
+<a href="/kit" class="btn btn-m" style="min-height: 42px; padding: 0 16px; font-size: 13px">El Kit ϟ</a>
+</nav>
+</header>
+
+<section style="position: relative; height: 940px; overflow: hidden; background: #000">
+<img class="storm" src="images/86c4e6e129026cbc321c6474cc4031d6.jpg" alt="Concierto en la oscuridad, iluminado por un relámpago" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="flash" style="position: absolute; inset: 0; background: #FFD6EC; mix-blend-mode: overlay; pointer-events: none"></div>
+<svg class="bolt" viewBox="0 0 220 900" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 64%; top: -20px; width: 220px; height: 900px; pointer-events: none; filter: drop-shadow(0 0 12px #FF9BD0) drop-shadow(0 0 40px #FF2E93)"><path d="M120 0 L92 170 L140 190 L70 400 L128 410 L40 640 L96 650 L20 900" fill="none" stroke="#FFF4FA" stroke-width="5"></path><path d="M70 400 L20 470 L34 520" fill="none" stroke="#FFF4FA" stroke-width="2.5"></path></svg>
+<svg class="bolt b2" viewBox="0 0 160 600" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 12%; top: -10px; width: 160px; height: 600px; pointer-events: none; filter: drop-shadow(0 0 14px #C6FF3D)"><path d="M90 0 L60 120 L100 132 L40 300 L86 310 L30 460 L70 470 L24 600" fill="none" stroke="#F4FFE0" stroke-width="4"></path></svg>
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,3,7,.55) 0%, rgba(5,3,7,0) 30%, rgba(5,3,7,.2) 62%, #050307 100%); pointer-events: none"></div>
+<div style="position: absolute; left: 4%; right: 4%; bottom: 80px; z-index: 5">
+<p class="zine" style="margin: 0 0 18px; font-size: 13px; color: var(--acid)">arte · cultura local · ritual · movimiento</p>
+<h1 style="margin: 0; position: relative; line-height: .85">
+<span class="big jit" style="display: block; font-size: clamp(64px, 12vw, 190px); color: var(--pale)">Azul</span>
+<span class="scrawl" style="display: block; margin: -.15em 0 0 14%; font-size: clamp(46px, 7.5vw, 120px); color: var(--mag); transform: rotate(-6deg); text-shadow: 0 0 24px rgba(255,46,147,.55)">perenne</span>
+</h1>
+<p style="margin: 34px 0 0; max-width: 560px; font-size: 21px; line-height: 1.5; font-style: italic; font-weight: 300">Un refugio creativo para quienes buscan sentido en lo invisible y lo visible…</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px">
+<a href="/kit" class="btn btn-m">Recibe el Kit ϟ</a>
+<a href="/imaginario" class="btn btn-o">Ver Imaginario</a>
+</div>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1000px; margin: 0 auto; padding: 130px 5% 50px; box-sizing: border-box; text-align: center">
+<p class="zine" style="margin: 0 0 16px; font-size: 13px; color: var(--cy)">Si no entiendes lo que digo…</p>
+<h2 class="big chroma" style="margin: 0 0 18px; font-size: clamp(52px, 9vw, 130px); line-height: .9">¡Enhorabuena!</h2>
+<p class="scrawl" style="margin: 0 auto 40px; font-size: clamp(20px, 2.4vw, 28px); color: var(--acid); transform: rotate(-2deg)">siéntete en casa</p>
+<a href="/que-es-esto" class="btn btn-o">¿Qué es esto? <span class="g" style="color: var(--mag)">✷</span></a>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 110px 5% 120px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 64px">
+<h2 class="big" style="margin: 0; font-size: clamp(44px, 6.5vw, 96px); line-height: .9">Tres <span style="color: var(--mag)">corrientes</span></h2>
+<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: var(--mute)">Un viaje para aprender de quienes habitan cada lugar. Lo que encuentro vuelve aquí.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 34px">
+<a href="/bitacora" class="card">
+<img src="images/213b7374467d720cc1cbd5e84a139419.jpg" alt="Balcón frente al mar al atardecer">
+<div style="padding: 22px 22px 26px"><h3 class="big" style="margin: 0; font-size: 34px">Bitácora</h3><p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: var(--mute)">Arte, oficios y cultura local, aprendidos de su gente.</p></div>
+</a>
+<a href="/bitacora#movimiento" class="card">
+<img src="images/f77ce3b0ca48575d56637a0fcc5d6946.jpg" alt="Tronco de árbol visto desde abajo con destello de sol">
+<div style="padding: 22px 22px 26px"><h3 class="big" style="margin: 0; font-size: 34px">Movimiento</h3><p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: var(--mute)">Yoga en video. El cuerpo como primera lengua.</p></div>
+</a>
+<a href="/bitacora#escritos" class="card">
+<img src="images/3232f43f638967860a5aa85766f0bb69.jpg" alt="Mano extendida sobre un arroyo">
+<div style="padding: 22px 22px 26px"><h3 class="big" style="margin: 0; font-size: 34px">Escritos</h3><p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: var(--mute)">Lenguaje simbólico, para leer entre líneas.</p></div>
+</a>
+</div>
+</section>
+
+<section style="position: relative; max-width: 980px; margin: 0 auto; padding: 60px 5% 110px; box-sizing: border-box; text-align: center">
+<p class="zine" style="margin: 0 0 26px; font-size: 13px; color: var(--acid)">✶ Imaginary click ✶</p>
+<p style="margin: 0 auto; font-style: italic; font-weight: 300; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.4; color: var(--sil)">me gusta habitar el punto de ebullición, la trenza divina llena de chispa, luces serpenteantes y la imperfección de lo por finalizar.</p>
+<p style="margin: 30px auto 0; max-width: 820px; font-style: italic; font-weight: 300; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.4; color: var(--sil)">mis fotos son <span class="scrawl" style="font-style: normal; color: var(--mag); font-size: .8em">destellos</span>, pruebas de esas muertes bellas dentro y fuera de nuestro interior.</p>
+</section>
+
+<section style="padding: 20px 0 130px">
+<div style="max-width: 1280px; margin: 0 auto 44px; padding: 0 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<h2 class="big chroma" style="margin: 0; font-size: clamp(44px, 6.5vw, 96px); line-height: .9">Imaginario</h2>
+<p class="zine" style="margin: 0; font-size: 13px; color: var(--mute)">fotografía analógica · ninguna ha sido editada</p>
+</div>
+<div style="overflow: hidden; white-space: nowrap">
+<div class="strip" style="display: inline-flex; gap: 18px">
+<img src="images/24c08fc32356db81a3bb705ec5def398.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/0eb59c3be350e980585991aa8bb04dfa.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/2467881d4b9162ca774cf342abc6edff.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/1703abbbded9f3905bc0306c14c9c39c.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/960995ba0f0ce2c47f28d92c67590ccd.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/be0e5c5ba44e73c5cc0343d9f20f7133.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/e98cca400aaf95506cdb0e4c5c2150d5.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/dd6c2a5a1617db6bb08cc2f6e74fc9fa.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/24c08fc32356db81a3bb705ec5def398.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/0eb59c3be350e980585991aa8bb04dfa.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/2467881d4b9162ca774cf342abc6edff.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/1703abbbded9f3905bc0306c14c9c39c.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/960995ba0f0ce2c47f28d92c67590ccd.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/be0e5c5ba44e73c5cc0343d9f20f7133.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/e98cca400aaf95506cdb0e4c5c2150d5.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+<img src="images/dd6c2a5a1617db6bb08cc2f6e74fc9fa.jpg" alt="" loading="lazy" style="height: 360px; width: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block">
+</div>
+</div>
+<div style="max-width: 1280px; margin: 36px auto 0; padding: 0 5%; box-sizing: border-box">
+<a href="/imaginario" class="zine" style="font-size: 13px; color: var(--mag); border-bottom: 2px solid var(--mag); padding-bottom: 6px">Ver el portafolio completo →</a>
+</div>
+</section>
+
+<section id="sobre" style="max-width: 1240px; margin: 0 auto; padding: 60px 5% 140px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="position: relative; flex: 1 1 360px; transform: rotate(-2.5deg)">
+<span class="tape" aria-hidden="true" style="top: -12px; left: 38%; transform: rotate(4deg); z-index: 2"></span>
+<img src="images/d07fb9e91faebab675468ed64331ba68.jpg" alt="Flores amarillas contra el cielo" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: 10px solid var(--pale); box-sizing: border-box">
+</div>
+<div style="flex: 1 1 420px">
+<p class="zine" style="margin: 0 0 16px; font-size: 13px; color: var(--cy)">Sobre Azul y quién está detrás…</p>
+<h2 class="big" style="margin: 0 0 10px; font-size: clamp(48px, 6vw, 88px); line-height: .9">Soy <span style="color: var(--mag)">Camila</span>.</h2>
+<p class="scrawl" style="margin: 0 0 30px; font-size: clamp(18px, 2vw, 24px); color: var(--acid); transform: rotate(-2deg); transform-origin: left">a veces sola, nunca sin mí.</p>
+<p style="margin: 0 0 18px; font-size: 19px; line-height: 1.7">Soy aprendiz del arte y el movimiento. Aprendo arte local para construir mi editorial andante.</p>
+<p style="margin: 0 0 30px; font-size: 19px; line-height: 1.7; color: var(--mute); font-style: italic">Perenne es lo que atraviesa los años.</p>
+<blockquote style="margin: 0; padding: 24px 0 0; border-top: 2px dashed #3A3440">
+<p class="zine" style="margin: 0; font-size: 13px; line-height: 1.9; letter-spacing: .1em; color: var(--sil)">Paciencia en el lago —silencio—. Gota a gota, va haciéndose espacio hacia el cielo… que siempre fue su reino (…) hasta convertirse en agua de nube, esponjosa… jugosa… jadeando en aquel propósito por el que decidió nacer.</p>
+<p class="scrawl" style="margin: 14px 0 0; font-size: 20px; color: var(--mag)">Camila.</p>
+</blockquote>
+</div>
+</section>
+
+<section style="position: relative; padding: 130px 5% 140px; background: var(--mag); color: #050307; overflow: hidden">
+<svg viewBox="0 0 120 200" aria-hidden="true" style="position: absolute; right: -30px; top: -20px; width: 380px; height: 640px; opacity: .22"><path d="M70 0 L20 110 L58 110 L38 200 L100 80 L62 80 L82 0 Z" fill="#050307"></path></svg>
+<div style="position: relative; max-width: 1000px; margin: 0 auto">
+<h2 class="big" style="margin: 0; font-size: clamp(60px, 10vw, 150px); line-height: .85">El Kit <span class="scrawl" style="display: inline-block; font-size: .42em; transform: rotate(-8deg) translateY(-.3em); color: #050307">perenne</span></h2>
+<p style="margin: 28px 0 30px; max-width: 540px; font-size: 20px; line-height: 1.6">Una práctica, un ritual y cartas desde el camino. Esto no es solo un newsletter, es un portal.</p>
+<form onsubmit="event.preventDefault();try{sessionStorage.setItem('kitEmail',document.getElementById('n-email').value)}catch(e){}location.href='/kit'" style="display: flex; flex-wrap: wrap; gap: 12px; max-width: 640px">
+<label for="n-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Correo electrónico</label>
+<input id="n-email" type="email" placeholder="tu correo electrónico" style="flex: 1 1 260px; min-height: 56px; padding: 0 20px; border: 2px solid #050307; background: #050307; color: var(--pale); font: inherit; font-size: 17px; box-sizing: border-box">
+<button type="submit" class="btn" style="min-height: 56px; background: #050307; color: var(--acid); border-color: #050307">Abrir el portal ϟ</button>
+</form>
+</div>
+</section>
+
+<footer style="padding: 44px 4%; background: #050307">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center">
+<p class="big" style="margin: 0; font-size: 30px">Azul Perenne</p>
+<nav class="zine nav" style="display: flex; flex-wrap: wrap; gap: 12px 26px; font-size: 13px">
+<a href="/imaginario">Imaginario</a>
+<a href="/bitacora">Bitácora</a>
+<a href="/kit">El Kit</a>
+<a href="/que-es-esto">¿Qué es esto?</a>
+</nav>
+<p class="zine" style="margin: 0; font-size: 12px; color: var(--mute)">© 2026 · ES / EN</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
