@@ -3,7 +3,7 @@ sys.path.insert(0,sys.argv[1])
 from tr import T
 from bs4 import BeautifulSoup, Comment
 os.chdir('/home/claude/site')
-pages=['index.html','que-es-esto.html','bitacora.html','imaginario.html','kit.html']+sorted(f for f in glob.glob('escritos/*.html') if not f.endswith('index.html'))
+pages=['index.html','que-es-esto.html','bitacora.html','imaginario.html','kit.html']+sorted(f for f in glob.glob('escritos/*.html') if not f.endswith('index.html'))+sorted(glob.glob('bitacora/*.html'))
 def url(p):
     if p=='index.html': return '/'
     return '/'+p[:-5]
