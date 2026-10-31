@@ -347,4 +347,12 @@ T = {
 "Mi visión artística y visual":"My artistic, visual vision",
 "Mi visión artística y visual · fotografía analógica":"My artistic, visual vision · analog photography",
 "Cuerpo y sostén. El cuerpo es el camino.":"Body and support. The body is the path.",
+"Lo que hago":"What I do",
+"El puente entre":"The bridge between",
+"todas las corrientes":"all the currents",
+"Encuentros, talleres, recorridos y colaboraciones con personas y comunidades locales.":"Gatherings, workshops, journeys and collaborations with local people and communities.",
+"Encuentros":"Gatherings",
+"Talleres":"Workshops",
+"Recorridos":"Journeys",
+"Colaboraciones":"Collaborations",
 }
