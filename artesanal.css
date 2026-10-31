@@ -16,3 +16,9 @@ body{background-color:#110E0C!important;background-image:
 [style*="#1A1612"]{background-color:#1A1612!important;box-shadow:inset 0 0 60px rgba(0,0,0,.55),0 0 0 1px rgba(156,122,78,.35);border-color:#5A4630!important}
 /* títulos góticos en tinta de bronce envejecido */
 h1,h2{text-shadow:0 1px 0 rgba(0,0,0,.6)}
+/* letras de hueso: marfil envejecido, poroso y tallado */
+h2,h3,.big .t,header.nav>a:first-child,footer p:first-child{color:#E6DAC0;background-image:
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .35' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .17 0 0 0 -1.6 .95'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23b)' opacity='.55'/%3E%3C/svg%3E"),
+ linear-gradient(178deg,#F6EEDC 0%,#E8DCC0 35%,#CDBB94 70%,#B49F78 100%);
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.85)) drop-shadow(0 -1px 0 rgba(255,245,225,.12))}
+h2 *,h3 *{-webkit-text-fill-color:currentColor}
