@@ -346,4 +346,5 @@ T = {
 "Recolección de historias: territorio y comunidad. El arte detrás del arte.":"A gathering of stories: territory and community. The art behind the art.",
 "Mi visión artística y visual":"My artistic, visual vision",
 "Mi visión artística y visual · fotografía analógica":"My artistic, visual vision · analog photography",
+"Cuerpo y sostén. El cuerpo es el camino.":"Body and support. The body is the path.",
 }
