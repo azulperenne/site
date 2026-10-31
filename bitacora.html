@@ -26,6 +26,9 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#A9C2D3}
 .row{transition:padding .5s cubic-bezier(.2,.7,.2,1),color .4s}.row:hover{padding-left:20px;color:#A9C2D3}
 .nav a{color:#FCFBF8}.nav a:hover{color:#A9C2D3}
 @media (prefers-reduced-motion:reduce){.kb,.pulse,.rise,.route{animation:none}}
+@keyframes nadar{0%,100%{transform:rotate(var(--r)) scaleX(var(--f)) translateY(0)}50%{transform:rotate(calc(var(--r) + 4deg)) scaleX(var(--f)) translateY(-10px)}}
+.pez{display:block;animation:nadar 6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.pez{animation:none;transform:rotate(var(--r)) scaleX(var(--f))}}
 </style>
 <link rel="stylesheet" href="/vintage.css">
 <link rel="stylesheet" href="/artesanal.css?v=10">
@@ -76,6 +79,15 @@ a{color:#80A3B9;text-decoration:none}a:hover{color:#A9C2D3}
 
 <section style="max-width: 1280px; margin: 0 auto; padding: 110px 5% 60px; box-sizing: border-box; text-align: center">
 <h2 style="margin: 0 0 56px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 5.4vw, 72px); line-height: 1">Del <em style="color: #80A3B9">camino</em></h2>
+<div class="cardumen" role="img" aria-label="Cardumen de peces dibujados en puntillismo por Camila" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px 34px; margin: 0 auto 70px; max-width: 1100px">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: -18deg; --f: 1; width: 140px; height: auto; margin-top: 0px; animation-delay: -0.0s; filter: none">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: 8deg; --f: -1; width: 95px; height: auto; margin-top: 40px; animation-delay: -1.3s; filter: none">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: -28deg; --f: 1; width: 120px; height: auto; margin-top: -20px; animation-delay: -2.6s; filter: none">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: 14deg; --f: -1; width: 80px; height: auto; margin-top: 30px; animation-delay: -3.9s; filter: none">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: -10deg; --f: 1; width: 150px; height: auto; margin-top: -10px; animation-delay: -5.2s; filter: none">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: 22deg; --f: -1; width: 100px; height: auto; margin-top: 25px; animation-delay: -6.5s; filter: none">
+<img src="images/pez-camila.webp" alt="" aria-hidden="true" class="pez" style="--r: -20deg; --f: 1; width: 115px; height: auto; margin-top: 0px; animation-delay: -7.8s; filter: none">
+</div>
 <figure style="margin: 0 auto; max-width: 340px; padding: 0 5%">
 <img src="images/rulos-camila.webp" alt="Boceto a lápiz de Camila: una chica de rizos con los brazos cruzados sobre el pecho y una falda larga" loading="lazy" style="width: 100%; height: auto; display: block; filter: none">
 </figure>
